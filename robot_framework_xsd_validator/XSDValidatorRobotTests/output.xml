@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.3 on win32)" generated="20200211 11:39:42.691" rpa="false">
+<suite id="s1" name="XSDValidatorRobotTests" source="D:\UFT_Project_Workspace\XSDValidatorRobotTests">
+<suite id="s1-s1" name="XSDValidator" source="D:\UFT_Project_Workspace\XSDValidatorRobotTests\XSDValidator">
+<suite id="s1-s1-s1" name="XSDValidator" source="D:\UFT_Project_Workspace\XSDValidatorRobotTests\XSDValidator\XSDValidator.robot">
+<test id="s1-s1-s1-t1" name="Verify XSDValidator">
+<kw name="Validate XSD File" library="XSDValidator">
+<doc>| Usage |
+This keyword is used to validate am xml file against the XSD</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\XSDValidatorRobotTests\\XSDValidator\\SampleData\\XSD\\S202SCTDHEUDHEUA4D91530LL9101E.I</arg>
+</arguments>
+<msg timestamp="20200211 11:39:44.962" level="INFO">{'@xmlns': 'urn:iso:std:iso:20022:tech:xsd:pacs.008.001.02',
+ '@xmlns:S2SCTIcf': 'urn:S2SCTIcf:xsd:$SCTIcfBlkCredTrf',
+ '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+ '@xsi:schemaLocation': 'urn:S2SCTIcf:xsd:$SCTIcfBlkCredTrf '
+                        'SCTIcfBlkCredTrf.xsd',
+ 'S2SCTIcf:FDtTm': '2018-04-13T09:15:31',
+ 'S2SCTIcf:FIToFICstmrCdtTrf': [{'CdtTrfTxInf': [{'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2001'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('10.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '0025110413',
+                                                            'InstrId': 'IA4D85509FH90D26',
+                                                            'TxId': 'IA4D85509FH90D26'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Strd': [{'CdtrRefInf': {'Ref': 'Structured '
+                                                                                             'occurrence',
+                                                                                      'Tp': {'CdOrPrtry': {'Cd': 'SCOR'}}}}]}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2002'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('20.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '0125110413',
+                                                            'InstrId': 'IA4D85509FH90D27',
+                                                            'TxId': 'IA4D85509FH90D27'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Ustrd': ['Unstructured '
+                                                                       'occurrence']}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2001'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('10.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '2428110413',
+                                                            'InstrId': 'IA4D858338S90D20',
+                                                            'TxId': 'IA4D858338S90D20'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Strd': [{'CdtrRefInf': {'Ref': 'Structured '
+                                                                                             'occurrence',
+                                                                                      'Tp': {'CdOrPrtry': {'Cd': 'SCOR'}}}}]}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2002'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('20.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '2528110413',
+                                                            'InstrId': 'IA4D858338T90D21',
+                                                            'TxId': 'IA4D858338T90D21'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Ustrd': ['Unstructured '
+                                                                       'occurrence']}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2001'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('10.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '0137110413',
+                                                            'InstrId': 'IA4D907101K90D1U',
+                                                            'TxId': 'IA4D907101K90D1U'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Strd': [{'CdtrRefInf': {'Ref': 'Structured '
+                                                                                             'occurrence',
+                                                                                      'Tp': {'CdOrPrtry': {'Cd': 'SCOR'}}}}]}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2002'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('20.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '0237110413',
+                                                            'InstrId': 'IA4D907101K90D1V',
+                                                            'TxId': 'IA4D907101K90D1V'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Ustrd': ['Unstructured '
+                                                                       'occurrence']}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2001'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('10.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '4742110413',
+                                                            'InstrId': 'IA4D91256NI90D1O',
+                                                            'TxId': 'IA4D91256NI90D1O'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Strd': [{'CdtrRefInf': {'Ref': 'Structured '
+                                                                                             'occurrence',
+                                                                                      'Tp': {'CdOrPrtry': {'Cd': 'SCOR'}}}}]}},
+                                                 {'Cdtr': {'Nm': 'Jerry '
+                                                                 'WalkerTR2X2002'},
+                                                  'CdtrAcct': {'Id': {'IBAN': 'SK6711000000002003006327'}},
+                                                  'CdtrAgt': {'FinInstnId': {'BIC': 'CITISKXXXXX'}},
+                                                  'ChrgBr': 'SLEV',
+                                                  'Dbtr': {'Nm': 'Joe Nick '
+                                                                 'TRANS1TR2X2001 '
+                                                                 'NO_BI_WAIT '
+                                                                 'BI_INQ_RES'},
+                                                  'DbtrAcct': {'Id': {'IBAN': 'DE09500109000033332097'}},
+                                                  'DbtrAgt': {'FinInstnId': {'BIC': 'DHEUDHEUXXX'}},
+                                                  'IntrBkSttlmAmt': {'$': Decimal('20.00'),
+                                                                     '@Ccy': 'EUR'},
+                                                  'PmtId': {'EndToEndId': '4842110413',
+                                                            'InstrId': 'IA4D91256NI90D1P',
+                                                            'TxId': 'IA4D91256NI90D1P'},
+                                                  'PmtTpInf': {'CtgyPurp': {'Cd': 'SALA'},
+                                                               'SvcLvl': {'Cd': 'SEPA'}},
+                                                  'RmtInf': {'Ustrd': ['Unstructured '
+                                                                       'occurrence']}}],
+                                 'GrpHdr': {'CreDtTm': '2018-04-13T09:15:31',
+                                            'InstgAgt': {'FinInstnId': {'BIC': 'DHEUDHEU'}},
+                                            'IntrBkSttlmDt': '2017-08-05',
+                                            'MsgId': 'IA4D91530LV9101G',
+                                            'NbOfTxs': '8',
+                                            'SttlmInf': {'ClrSys': {'Prtry': 'ST2'},
+                                                         'SttlmMtd': 'CLRG'},
+                                            'TtlIntrBkSttlmAmt': {'$': Decimal('120.0'),
+                                                                  '@Ccy': 'EUR'}}}],
+ 'S2SCTIcf:FType': 'ICF',
+ 'S2SCTIcf:FileRef': 'IA4D91530LV9101G',
+ 'S2SCTIcf:NumCTBlk': '1',
+ 'S2SCTIcf:NumPCRBlk': '0',
+ 'S2SCTIcf:NumRFRBlk': '0',
+ 'S2SCTIcf:NumROIBlk': '0',
+ 'S2SCTIcf:RcvgInst': 'ZYDOFRP0',
+ 'S2SCTIcf:SndgInst': 'DHEUDHEU',
+ 'S2SCTIcf:SrvcId': 'SCT',
+ 'S2SCTIcf:TstCode': 'P'}
+None</msg>
+<status status="PASS" starttime="20200211 11:39:43.349" endtime="20200211 11:39:44.962"></status>
+</kw>
+<status status="PASS" starttime="20200211 11:39:43.348" endtime="20200211 11:39:44.963" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200211 11:39:42.802" endtime="20200211 11:39:44.963"></status>
+</suite>
+<status status="PASS" starttime="20200211 11:39:42.799" endtime="20200211 11:39:44.965"></status>
+</suite>
+<status status="PASS" starttime="20200211 11:39:42.777" endtime="20200211 11:39:44.967"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="XSDValidatorRobotTests">XSDValidatorRobotTests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="XSDValidator">XSDValidatorRobotTests.XSDValidator</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="XSDValidator">XSDValidatorRobotTests.XSDValidator.XSDValidator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

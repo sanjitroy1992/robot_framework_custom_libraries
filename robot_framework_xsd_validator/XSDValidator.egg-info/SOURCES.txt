@@ -1,0 +1,9 @@
+README.md
+setup.py
+XSDValidator/XSDValidator.py
+XSDValidator/__init__.py
+XSDValidator/version.py
+XSDValidator.egg-info/PKG-INFO
+XSDValidator.egg-info/SOURCES.txt
+XSDValidator.egg-info/dependency_links.txt
+XSDValidator.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+README.md
+setup.py
+SeleniumLibraryExtended/__init__.py
+SeleniumLibraryExtended/webdrivermonkeypatches.py
+SeleniumLibraryExtended.egg-info/PKG-INFO
+SeleniumLibraryExtended.egg-info/SOURCES.txt
+SeleniumLibraryExtended.egg-info/dependency_links.txt
+SeleniumLibraryExtended.egg-info/top_level.txt

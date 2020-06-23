@@ -1,0 +1,8 @@
+README.md
+setup.py
+GenericLib/GenericLib.py
+GenericLib/__init__.py
+GenericLib.egg-info/PKG-INFO
+GenericLib.egg-info/SOURCES.txt
+GenericLib.egg-info/dependency_links.txt
+GenericLib.egg-info/top_level.txt

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec generated="20190620 17:29:24" type="library" name="ActiveMQ" format="ROBOT">
+<version></version>
+<scope>test suite</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``ActiveMQ``.</doc>
+<kw name="Mx Clear Queue">
+<arguments>
+<arg>Queuename</arg>
+</arguments>
+<doc>|Usage|  To clear all messages from Active MQ
+
+|Arguments|
+
+'Queuename' = Name of Active MQ queue
+ Example:
+     Mx Clear Queue    SAMPLE.Q</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Connect To ActiveMQ">
+<arguments>
+<arg>ActiveMQ_url</arg>
+<arg>username</arg>
+<arg>password</arg>
+</arguments>
+<doc>|Usage|  To connect with Active MQ
+
+|Arguments|
+
+'ActiveMQ_url' = URL of Active MQ
+
+'username' = Active MQ username
+
+'password' = Active MQ password</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Disconnect From ActiveMQ">
+<arguments>
+</arguments>
+<doc>|Usage|  To Disconnect Active MQ</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Get Message From Queue">
+<arguments>
+<arg>Queuename</arg>
+</arguments>
+<doc>|Usage|  To get message from Active MQ
+
+|Arguments|
+
+'Queuename' = Name of Active MQ queue
+ This keyword returns/pops the first message in the Active MQ
+ 
+ Example:
+     ${message}    Mx Get Message From Queue    SAMPLE.Q</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Send Message To Queue">
+<arguments>
+<arg>Queuename</arg>
+<arg>message</arg>
+</arguments>
+<doc>|Usage|  To send message to Active MQ
+
+|Arguments|
+
+'Queuename' = Name of Active MQ queue
+
+'message' = message to send.
+
+NOTE: Before sending message, check the message format that queue excepts( example: text file or xml file data )</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>

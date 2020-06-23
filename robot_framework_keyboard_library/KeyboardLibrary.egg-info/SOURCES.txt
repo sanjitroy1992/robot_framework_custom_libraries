@@ -1,0 +1,8 @@
+README.md
+setup.py
+KeyboardLibrary/KeyboardLibrary.py
+KeyboardLibrary/__init__.py
+KeyboardLibrary.egg-info/PKG-INFO
+KeyboardLibrary.egg-info/SOURCES.txt
+KeyboardLibrary.egg-info/dependency_links.txt
+KeyboardLibrary.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "sku": {
+      "description": "Stock Keeping Unit",
+      "type": "integer"
+    }
+  },
+  "required": ["name", "price"]
+}

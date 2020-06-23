@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190827 12:17:03.539" generator="Robot 3.1.1.1 (Python 2.7.14 on win32)">
+<suite source="D:\UFT_Project_Workspace\utf_uat\SampleTests\LibraryTests\Selenium\SeleniumLibraryExtendedLib.robot" id="s1" name="SeleniumLibraryExtendedLib">
+<kw type="setup" name="Empty Directory" library="OperatingSystem">
+<doc>Deletes all the content from the given directory.</doc>
+<arguments>
+<arg>${DownloadDir}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:03.980" html="yes" level="INFO">Listing contents of directory '&lt;a href="file://D:\UFT_Project_Workspace\utf_uat\SampleTests\LibraryTests\Selenium\SampleData\Downloads"&gt;D:\UFT_Project_Workspace\utf_uat\SampleTests\LibraryTests\Selenium\SampleData\Downloads&lt;/a&gt;'.</msg>
+<msg timestamp="20190827 12:17:03.983" html="yes" level="INFO">Emptied directory '&lt;a href="file://D:\UFT_Project_Workspace\utf_uat\SampleTests\LibraryTests\Selenium\SampleData\Downloads"&gt;D:\UFT_Project_Workspace\utf_uat\SampleTests\LibraryTests\Selenium\SampleData\Downloads&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20190827 12:17:03.983" starttime="20190827 12:17:03.980"></status>
+</kw>
+<test id="s1-t1" name="Chrome download test in UI mode">
+<kw name="Mx Create Chrome Webdriver And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to create chrome webdriver with the options to set the default download directory and to launch in headless mode.
+By default the screen size for the browser is set to maximize.</doc>
+<arguments>
+<arg>chrome</arg>
+<arg>${DownloadDir}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:03.985" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20190827 12:17:09.439" starttime="20190827 12:17:03.985"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibraryExtended">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:09.442" level="INFO">Opening url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'</msg>
+<status status="PASS" endtime="20190827 12:17:17.280" starttime="20190827 12:17:09.442"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190827 12:17:19.283" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190827 12:17:19.283" starttime="20190827 12:17:17.281"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:19.284" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" endtime="20190827 12:17:19.816" starttime="20190827 12:17:19.284"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190827 12:17:20.241" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190827 12:17:20.241" starttime="20190827 12:17:19.819"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20190827 12:17:24.244" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20190827 12:17:24.244" starttime="20190827 12:17:20.244"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190827 12:17:26.606" starttime="20190827 12:17:24.245"></status>
+</kw>
+<status status="PASS" endtime="20190827 12:17:26.607" critical="yes" starttime="20190827 12:17:03.984"></status>
+</test>
+<test id="s1-t2" name="Chrome download test in headless mode">
+<kw name="Mx Create Chrome Webdriver And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to create chrome webdriver with the options to set the default download directory and to launch in headless mode.
+By default the screen size for the browser is set to maximize.</doc>
+<arguments>
+<arg>chrome</arg>
+<arg>${DownloadDir}</arg>
+<arg>headless_mode=Yes</arg>
+</arguments>
+<msg timestamp="20190827 12:17:26.612" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20190827 12:17:30.112" starttime="20190827 12:17:26.611"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibraryExtended">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:30.115" level="INFO">Opening url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'</msg>
+<status status="PASS" endtime="20190827 12:17:36.673" starttime="20190827 12:17:30.115"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190827 12:17:38.677" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190827 12:17:38.677" starttime="20190827 12:17:36.675"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:38.679" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" endtime="20190827 12:17:39.163" starttime="20190827 12:17:38.678"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190827 12:17:39.535" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190827 12:17:39.535" starttime="20190827 12:17:39.167"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20190827 12:17:43.536" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20190827 12:17:43.536" starttime="20190827 12:17:39.536"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190827 12:17:45.700" starttime="20190827 12:17:43.538"></status>
+</kw>
+<status status="PASS" endtime="20190827 12:17:45.702" critical="yes" starttime="20190827 12:17:26.610"></status>
+</test>
+<test id="s1-t3" name="Firefox download test in UI mode">
+<kw name="Mx Set Firefox Profile And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to set firefox profile with the options to set the default download directory and to launch in headless mode.</doc>
+<arguments>
+<arg>firefox</arg>
+<arg>${DownloadDir}</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20190827 12:17:45.776" level="INFO">${var1} = c:\users\sanjiroy\appdata\local\temp\tmplab65s</msg>
+<status status="PASS" endtime="20190827 12:17:45.776" starttime="20190827 12:17:45.767"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+<arg>Firefox</arg>
+<arg>ff_profile_dir=${var1}</arg>
+</arguments>
+<msg timestamp="20190827 12:17:45.777" level="INFO">Opening browser 'Firefox' to base url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'.</msg>
+<status status="PASS" endtime="20190827 12:18:07.030" starttime="20190827 12:17:45.777"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190827 12:18:07.308" starttime="20190827 12:18:07.045"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190827 12:18:09.328" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190827 12:18:09.328" starttime="20190827 12:18:07.323"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20190827 12:18:09.328" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" endtime="20190827 12:18:14.639" starttime="20190827 12:18:09.328"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190827 12:18:14.722" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190827 12:18:14.722" starttime="20190827 12:18:14.639"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20190827 12:18:18.737" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20190827 12:18:18.737" starttime="20190827 12:18:14.722"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190827 12:18:19.941" starttime="20190827 12:18:18.737"></status>
+</kw>
+<status status="PASS" endtime="20190827 12:18:19.941" critical="yes" starttime="20190827 12:17:45.708"></status>
+</test>
+<test id="s1-t4" name="Firefox download test in headless mode">
+<kw name="Mx Set Firefox Profile And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to set firefox profile with the options to set the default download directory and to launch in headless mode.</doc>
+<arguments>
+<arg>firefox</arg>
+<arg>${DownloadDir}</arg>
+<arg>headless_mode=Yes</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20190827 12:18:19.941" level="INFO">${var1} = c:\users\sanjiroy\appdata\local\temp\tmpc0x5a5</msg>
+<status status="PASS" endtime="20190827 12:18:19.941" starttime="20190827 12:18:19.941"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+<arg>Firefox</arg>
+<arg>ff_profile_dir=${var1}</arg>
+</arguments>
+<msg timestamp="20190827 12:18:19.941" level="INFO">Opening browser 'Firefox' to base url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'.</msg>
+<status status="PASS" endtime="20190827 12:18:36.847" starttime="20190827 12:18:19.941"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibraryExtended">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1080</arg>
+</arguments>
+<status status="PASS" endtime="20190827 12:18:36.894" starttime="20190827 12:18:36.847"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190827 12:18:38.905" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190827 12:18:38.905" starttime="20190827 12:18:36.894"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20190827 12:18:38.905" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" endtime="20190827 12:18:44.191" starttime="20190827 12:18:38.905"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190827 12:18:44.291" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190827 12:18:44.291" starttime="20190827 12:18:44.191"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20190827 12:18:48.291" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20190827 12:18:48.291" starttime="20190827 12:18:44.291"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190827 12:18:49.529" starttime="20190827 12:18:48.294"></status>
+</kw>
+<status status="PASS" endtime="20190827 12:18:49.529" critical="yes" starttime="20190827 12:18:19.941"></status>
+</test>
+<status status="PASS" endtime="20190827 12:18:49.545" starttime="20190827 12:17:03.543"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="SeleniumLibraryExtendedLib" pass="4">SeleniumLibraryExtendedLib</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

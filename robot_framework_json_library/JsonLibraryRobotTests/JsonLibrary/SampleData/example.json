@@ -1,0 +1,29 @@
+{
+	"firstName": "John",
+	"lastName": "doe",
+	"age": 26,
+	"gender": "male",
+	"favoriteColor": ["blue", "black"],
+	"isMarried": false,
+	"address": {
+		"streetAddress": "naist street",
+		"city": "Dubai",
+		"postalCode": "630-0192",
+		"Boolean": true
+	},
+	"officeaddress": {
+		"streetAddress": "brooklyn street",
+		"city": "newyork",
+		"postalCode": "994-3332"
+	},
+	"phoneNumbers": [
+	{
+		"type": "iPhone",
+		"number": 9045678888
+	},
+	{
+		"type": "home",
+		"number": 9045678888.0
+		}
+	]
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.3 on win32)" generated="20200207 17:51:26.916" rpa="false">
+<suite id="s1" name="KeyboardRobotTests" source="D:\UFT_Project_Workspace\KeyboardRobotTests">
+<suite id="s1-s1" name="Keyboard" source="D:\UFT_Project_Workspace\KeyboardRobotTests\Keyboard">
+<suite id="s1-s1-s1" name="Keyboard" source="D:\UFT_Project_Workspace\KeyboardRobotTests\Keyboard\Keyboard.robot">
+<test id="s1-s1-s1-t1" name="Enter Text">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200207 17:51:28.022" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20200207 17:51:28.020" endtime="20200207 17:51:35.476"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+</arguments>
+<msg timestamp="20200207 17:51:35.478" level="INFO">Clicking element '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" starttime="20200207 17:51:35.477" endtime="20200207 17:51:35.581"></status>
+</kw>
+<kw name="Native Type" library="KeyboardLibrary">
+<doc>Sends key to the current window. Use {SPACE}, {TAB}, {ENTER} for spaces, tabs and new lines and should be given in capital letters.</doc>
+<arguments>
+<arg>Hello World</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:35.582" endtime="20200207 17:51:35.587"></status>
+</kw>
+<kw name="Press Combination" library="KeyboardLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>KEY.ENTER</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:35.589" endtime="20200207 17:51:35.886"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Sleep</arg>
+<arg>2s</arg>
+<arg>AND</arg>
+<arg>Close All Browsers</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 17:51:37.889" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 17:51:35.888" endtime="20200207 17:51:37.890"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 17:51:37.890" endtime="20200207 17:51:40.200"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:35.887" endtime="20200207 17:51:40.200"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:28.015" endtime="20200207 17:51:40.201" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Enter Text using {SPACE}">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200207 17:51:40.205" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20200207 17:51:40.203" endtime="20200207 17:51:47.134"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+</arguments>
+<msg timestamp="20200207 17:51:47.137" level="INFO">Clicking element '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" starttime="20200207 17:51:47.136" endtime="20200207 17:51:47.257"></status>
+</kw>
+<kw name="Native Type" library="KeyboardLibrary">
+<doc>Sends key to the current window. Use {SPACE}, {TAB}, {ENTER} for spaces, tabs and new lines and should be given in capital letters.</doc>
+<arguments>
+<arg>Hello{SPACE}World</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:47.259" endtime="20200207 17:51:47.263"></status>
+</kw>
+<kw name="Press Combination" library="KeyboardLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>KEY.ENTER</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:47.264" endtime="20200207 17:51:47.266"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Sleep</arg>
+<arg>2s</arg>
+<arg>AND</arg>
+<arg>Close All Browsers</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 17:51:49.268" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 17:51:47.267" endtime="20200207 17:51:49.268"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 17:51:49.269" endtime="20200207 17:51:51.564"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:47.266" endtime="20200207 17:51:51.564"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:40.202" endtime="20200207 17:51:51.565" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Enter Text using {TAB}">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200207 17:51:51.568" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20200207 17:51:51.567" endtime="20200207 17:51:58.579"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+</arguments>
+<msg timestamp="20200207 17:51:58.582" level="INFO">Clicking element '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" starttime="20200207 17:51:58.581" endtime="20200207 17:51:58.669"></status>
+</kw>
+<kw name="Native Type" library="KeyboardLibrary">
+<doc>Sends key to the current window. Use {SPACE}, {TAB}, {ENTER} for spaces, tabs and new lines and should be given in capital letters.</doc>
+<arguments>
+<arg>Hello{TAB}World</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:58.670" endtime="20200207 17:51:58.676"></status>
+</kw>
+<kw name="Select All" library="KeyboardLibrary">
+<doc>Simulates "Ctrl+A" key combination to select all elements.</doc>
+<status status="PASS" starttime="20200207 17:51:58.677" endtime="20200207 17:51:58.679"></status>
+</kw>
+<kw name="Press Combination" library="KeyboardLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>KEY.ENTER</arg>
+</arguments>
+<status status="PASS" starttime="20200207 17:51:58.680" endtime="20200207 17:51:58.682"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Sleep</arg>
+<arg>2s</arg>
+<arg>AND</arg>
+<arg>Close All Browsers</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 17:52:00.685" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 17:51:58.684" endtime="20200207 17:52:00.685"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 17:52:00.686" endtime="20200207 17:52:03.136"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:58.683" endtime="20200207 17:52:03.136"></status>
+</kw>
+<status status="PASS" starttime="20200207 17:51:51.566" endtime="20200207 17:52:03.137" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200207 17:51:27.009" endtime="20200207 17:52:03.139"></status>
+</suite>
+<status status="PASS" starttime="20200207 17:51:27.005" endtime="20200207 17:52:03.144"></status>
+</suite>
+<status status="PASS" starttime="20200207 17:51:26.970" endtime="20200207 17:52:03.148"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="KeyboardRobotTests">KeyboardRobotTests</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Keyboard">KeyboardRobotTests.Keyboard</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="Keyboard">KeyboardRobotTests.Keyboard.Keyboard</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

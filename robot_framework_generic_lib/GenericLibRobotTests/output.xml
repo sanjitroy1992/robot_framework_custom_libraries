@@ -1,0 +1,2235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.3 on win32)" generated="20200210 17:31:08.876" rpa="false">
+<suite id="s1" name="GenericLibRobotTests" source="D:\UFT_Project_Workspace\GenericLibRobotTests">
+<suite id="s1-s1" name="GenericLib" source="D:\UFT_Project_Workspace\GenericLibRobotTests\GenericLib">
+<suite id="s1-s1-s1" name="GenericLib" source="D:\UFT_Project_Workspace\GenericLibRobotTests\GenericLib\GenericLib.robot">
+<test id="s1-s1-s1-t1" name="Verify Csv - 1st and 2nd column not found -- Negitive Scenario">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Run Keyword And Return Status</arg>
+<arg>Verify Csv</arg>
+<arg>${file}</arg>
+<arg>Category Combination=Checking</arg>
+<arg>Household=1,902</arg>
+<arg>Deposit Balance=11,198,695</arg>
+</arguments>
+<assign>
+<var>${IsPassed}</var>
+</assign>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Verify Csv</arg>
+<arg>${file}</arg>
+<arg>Category Combination=Checking</arg>
+<arg>Household=1,902</arg>
+<arg>Deposit Balance=11,198,695</arg>
+</arguments>
+<kw name="Verify Csv" library="GenericLib">
+<doc>Used to verify the data present in csv file(comma separated).</doc>
+<arguments>
+<arg>${file}</arg>
+<arg>Category Combination=Checking</arg>
+<arg>Household=1,902</arg>
+<arg>Deposit Balance=11,198,695</arg>
+</arguments>
+<msg timestamp="20200210 17:31:10.627" level="FAIL">ColumnNotFound Error...
+Below Columns are not present in the file:
+Category Combination
+Household</msg>
+<status status="FAIL" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<msg timestamp="20200210 17:31:10.627" level="INFO">${IsPassed} = False</msg>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IsPassed}==True</arg>
+<arg>Fail</arg>
+<arg>Verify Csv failed to handle negative scenario</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.626" endtime="20200210 17:31:10.627" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Verify Csv - both data not found -- Negitive Scenario">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Run Keyword And Return Status</arg>
+<arg>Verify Csv</arg>
+<arg>${file}</arg>
+<arg>Category Combinations=Checking</arg>
+<arg>Households=1,903</arg>
+<arg>Deposit Balance=11,198,6945</arg>
+</arguments>
+<assign>
+<var>${IsPassed}</var>
+</assign>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Verify Csv</arg>
+<arg>${file}</arg>
+<arg>Category Combinations=Checking</arg>
+<arg>Households=1,903</arg>
+<arg>Deposit Balance=11,198,6945</arg>
+</arguments>
+<kw name="Verify Csv" library="GenericLib">
+<doc>Used to verify the data present in csv file(comma separated).</doc>
+<arguments>
+<arg>${file}</arg>
+<arg>Category Combinations=Checking</arg>
+<arg>Households=1,903</arg>
+<arg>Deposit Balance=11,198,6945</arg>
+</arguments>
+<msg timestamp="20200210 17:31:10.627" level="INFO" html="yes">&lt;TABLE border="1" style="border: 1px solid #000000; border-collapse: collapse;" cellpadding="4"&gt;
+ &lt;TR&gt;
+  &lt;TD bgcolor="red"&gt;Column&lt;/TD&gt;
+  &lt;TD bgcolor="red"&gt;Expected Value&lt;/TD&gt;
+  &lt;TD bgcolor="red"&gt;Actual Value&lt;/TD&gt;
+ &lt;/TR&gt;
+ &lt;TR&gt;
+  &lt;TD bgcolor="Linen"&gt;Households&lt;/TD&gt;
+  &lt;TD bgcolor="Linen"&gt;1,903&lt;/TD&gt;
+  &lt;TD bgcolor="Linen"&gt;1,902&lt;/TD&gt;
+ &lt;/TR&gt;
+ &lt;TR&gt;
+  &lt;TD bgcolor="Linen"&gt;Deposit Balance&lt;/TD&gt;
+  &lt;TD bgcolor="Linen"&gt;11,198,6945&lt;/TD&gt;
+  &lt;TD bgcolor="Linen"&gt;11,198,695&lt;/TD&gt;
+ &lt;/TR&gt;
+&lt;/TABLE&gt;
+</msg>
+<msg timestamp="20200210 17:31:10.627" level="FAIL">Values Not Found !! 
+</msg>
+<status status="FAIL" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<msg timestamp="20200210 17:31:10.627" level="INFO">${IsPassed} = False</msg>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IsPassed}==True</arg>
+<arg>Fail</arg>
+<arg>Verify Csv failed to handle negative scenario</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:10.627" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Show Report True - All Passed ++ Positive Scenario">
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,3,4</arg>
+<arg>show_report=true</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '1'), ('Browser', 'chrome'), ('Username', 'l’après-midi'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:10.659" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024771B09F60&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:10.659" endtime="20200210 17:31:10.659"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:10.659" endtime="20200210 17:31:10.659"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:10.659" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:10.659" endtime="20200210 17:31:10.659"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:10.659" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:31:17.726" level="INFO">${Browser_index} = 1</msg>
+<status status="PASS" starttime="20200210 17:31:10.659" endtime="20200210 17:31:17.726"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:31:17.726" endtime="20200210 17:31:18.883"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.643" endtime="20200210 17:31:18.883"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:31:18.883" endtime="20200210 17:31:21.017"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.643" endtime="20200210 17:31:21.017"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '3'), ('Browser', 'chrome'), ('Username', 'ghi'), ('Password', '789')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:21.017" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C866630&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:21.017" endtime="20200210 17:31:21.017"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:21.017" endtime="20200210 17:31:21.017"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:21.017" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:21.017" endtime="20200210 17:31:21.032"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:21.032" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:31:26.199" level="INFO">${Browser_index} = 2</msg>
+<status status="PASS" starttime="20200210 17:31:21.032" endtime="20200210 17:31:26.199"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:31:26.199" endtime="20200210 17:31:27.362"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:21.017" endtime="20200210 17:31:27.362"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:31:27.362" endtime="20200210 17:31:30.740"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:21.017" endtime="20200210 17:31:30.740"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '4'), ('Browser', 'chrome'), ('Username', 'abc'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:30.740" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C866898&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:30.740" endtime="20200210 17:31:30.740"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:30.757" endtime="20200210 17:31:30.758"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:30.760" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:30.759" endtime="20200210 17:31:30.760"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:30.762" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:31:35.589" level="INFO">${Browser_index} = 3</msg>
+<status status="PASS" starttime="20200210 17:31:30.762" endtime="20200210 17:31:35.589"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:31:35.589" endtime="20200210 17:31:36.737"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:30.740" endtime="20200210 17:31:36.737"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:31:36.737" endtime="20200210 17:31:38.886"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:30.740" endtime="20200210 17:31:38.888"></status>
+</kw>
+<msg timestamp="20200210 17:31:38.889" level="INFO">Execute Template With Multiple Data keyword passed for all the data</msg>
+<msg timestamp="20200210 17:31:38.889" level="INFO" html="yes">&lt;div&gt;&lt;div&gt;&lt;table&gt;
+                           &lt;caption&gt;&lt;b&gt;Execution Report&lt;/b&gt;&lt;/caption&gt;
+                           &lt;tr&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;rowid&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Status&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Browser&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Username&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User1&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User2&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Password&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color:green;text-align:center"&gt;1&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;PASS&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;chrome&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;l’après-midi&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;123&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color:green;text-align:center"&gt;3&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;PASS&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;chrome&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;ghi&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;789&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color:green;text-align:center"&gt;4&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;PASS&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;chrome&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;abc&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;123&lt;/td&gt;&lt;/tr&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:10.643" endtime="20200210 17:31:38.891"></status>
+</kw>
+<kw name="Return Value From Template" library="GenericLib">
+<doc>|Usage|
+ Used to return value from 'Execute Template With Multiple Data' keyword if the passed template or keyword is returning any value</doc>
+<assign>
+<var>${Browser}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.892" level="INFO">${Browser} = OrderedDict([('1', 'chrome'), ('3', 'chrome'), ('4', 'chrome')])</msg>
+<status status="PASS" starttime="20200210 17:31:38.892" endtime="20200210 17:31:38.892"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:10.627" endtime="20200210 17:31:38.892" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Show Report True - All Failed -- Negitive Scenario">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data</arg>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=2,5,8</arg>
+<arg>show_report=true</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=2,5,8</arg>
+<arg>show_report=true</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '2'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.934" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C8E0A20&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:38.934" endtime="20200210 17:31:38.934"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:38.934" endtime="20200210 17:31:38.934"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.934" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:38.934" endtime="20200210 17:31:38.949"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.949" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:31:38.949" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:31:38.949" endtime="20200210 17:31:38.949"></status>
+</kw>
+<msg timestamp="20200210 17:31:38.949" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:31:38.949" endtime="20200210 17:31:38.949"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.934" endtime="20200210 17:31:38.949"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.918" endtime="20200210 17:31:38.965"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '5'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.965" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C866F60&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.965"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.965"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.965" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.965"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.965" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:31:38.965" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.981"></status>
+</kw>
+<msg timestamp="20200210 17:31:38.984" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.987"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.991"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.965" endtime="20200210 17:31:38.992"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '8'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:38.992" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C8E0978&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:38.992" endtime="20200210 17:31:38.992"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:39.007" endtime="20200210 17:31:39.007"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:39.007" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:39.007" endtime="20200210 17:31:39.007"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:39.007" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:31:39.023" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:31:39.007" endtime="20200210 17:31:39.023"></status>
+</kw>
+<msg timestamp="20200210 17:31:39.023" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:31:39.007" endtime="20200210 17:31:39.023"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.992" endtime="20200210 17:31:39.023"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:38.992" endtime="20200210 17:31:39.023"></status>
+</kw>
+<msg timestamp="20200210 17:31:39.023" level="INFO" html="yes">&lt;div&gt;&lt;div&gt;&lt;table&gt;
+                           &lt;caption&gt;&lt;b&gt;Execution Report&lt;/b&gt;&lt;/caption&gt;
+                           &lt;tr&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;rowid&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Status&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Browser&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Username&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User1&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User2&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Password&lt;/td&gt;&lt;/tr&gt;
+                                     &lt;tr&gt;&lt;td style="background:red;text-align:center"&gt;2&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;FAIL&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;chrome1&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;def&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;456&lt;/td&gt;&lt;/tr&gt;
+                                     &lt;tr&gt;&lt;td style="background:red;text-align:center"&gt;5&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;FAIL&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;chrome1&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;def&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;456&lt;/td&gt;&lt;/tr&gt;
+                                     &lt;tr&gt;&lt;td style="background:red;text-align:center"&gt;8&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;FAIL&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;chrome1&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;def&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;456&lt;/td&gt;&lt;/tr&gt;</msg>
+<msg timestamp="20200210 17:31:39.023" level="FAIL">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="FAIL" starttime="20200210 17:31:38.902" endtime="20200210 17:31:39.023"></status>
+</kw>
+<msg timestamp="20200210 17:31:39.023" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20200210 17:31:38.902" endtime="20200210 17:31:39.039"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Status}'=='False'</arg>
+<arg>Log</arg>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<msg timestamp="20200210 17:31:39.039" level="INFO">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="PASS" starttime="20200210 17:31:39.039" endtime="20200210 17:31:39.039"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:39.039" endtime="20200210 17:31:39.039"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:38.900" endtime="20200210 17:31:39.039" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="Show Report True - Passed and Failed -- Negitive Scenario">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data</arg>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,2,3</arg>
+<arg>show_report=true</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,2,3</arg>
+<arg>show_report=true</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '1'), ('Browser', 'chrome'), ('Username', 'l’après-midi'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:39.070" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C8E03C8&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:39.070" endtime="20200210 17:31:39.070"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:39.070" endtime="20200210 17:31:39.070"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:39.070" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:39.070" endtime="20200210 17:31:39.070"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:39.070" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:31:44.265" level="INFO">${Browser_index} = 4</msg>
+<status status="PASS" starttime="20200210 17:31:39.070" endtime="20200210 17:31:44.265"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:31:44.266" endtime="20200210 17:31:45.412"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:39.070" endtime="20200210 17:31:45.412"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:31:45.412" endtime="20200210 17:31:47.601"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:39.054" endtime="20200210 17:31:47.601"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '2'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.601" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C8D1908&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:47.601" endtime="20200210 17:31:47.601"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:47.616" endtime="20200210 17:31:47.616"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.616" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:47.616" endtime="20200210 17:31:47.616"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.616" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:31:47.616" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:31:47.616" endtime="20200210 17:31:47.616"></status>
+</kw>
+<msg timestamp="20200210 17:31:47.632" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:31:47.616" endtime="20200210 17:31:47.632"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:47.601" endtime="20200210 17:31:47.632"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:31:47.601" endtime="20200210 17:31:47.632"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '3'), ('Browser', 'chrome'), ('Username', 'ghi'), ('Password', '789')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.647" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C9195C0&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:47.647" endtime="20200210 17:31:47.647"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:47.647" endtime="20200210 17:31:47.647"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.647" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:47.647" endtime="20200210 17:31:47.647"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:47.647" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:31:52.865" level="INFO">${Browser_index} = 5</msg>
+<status status="PASS" starttime="20200210 17:31:47.647" endtime="20200210 17:31:52.880"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:31:52.880" endtime="20200210 17:31:54.013"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:47.632" endtime="20200210 17:31:54.013"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:31:54.013" endtime="20200210 17:31:56.216"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:47.632" endtime="20200210 17:31:56.216"></status>
+</kw>
+<msg timestamp="20200210 17:31:56.216" level="INFO" html="yes">&lt;div&gt;&lt;div&gt;&lt;table&gt;
+                           &lt;caption&gt;&lt;b&gt;Execution Report&lt;/b&gt;&lt;/caption&gt;
+                           &lt;tr&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;rowid&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Status&lt;/td&gt;
+                           &lt;td style="background:#5CBFDE;text-align:center"&gt;Browser&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Username&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User1&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;User2&lt;/td&gt;&lt;td style="background:#5CBFDE;text-align:center"&gt;Password&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color:green;text-align:center"&gt;1&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;PASS&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;chrome&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;l’après-midi&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;123&lt;/td&gt;&lt;/tr&gt;
+                                     &lt;tr&gt;&lt;td style="background:red;text-align:center"&gt;2&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;FAIL&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;chrome1&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;def&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:red;text-align:center"&gt;456&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color:green;text-align:center"&gt;3&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;PASS&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;chrome&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;ghi&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:orange;text-align:center"&gt;DATA NOT FOUND!!&lt;/td&gt;&lt;td style="background-color:green;text-align:center"&gt;789&lt;/td&gt;&lt;/tr&gt;</msg>
+<msg timestamp="20200210 17:31:56.216" level="FAIL">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="FAIL" starttime="20200210 17:31:39.039" endtime="20200210 17:31:56.216"></status>
+</kw>
+<msg timestamp="20200210 17:31:56.216" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20200210 17:31:39.039" endtime="20200210 17:31:56.216"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Status}'=='False'</arg>
+<arg>Log</arg>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<msg timestamp="20200210 17:31:56.232" level="INFO">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="PASS" starttime="20200210 17:31:56.232" endtime="20200210 17:31:56.232"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:56.216" endtime="20200210 17:31:56.232"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:39.039" endtime="20200210 17:31:56.232" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="Show Report False - All Passed ++ Positive Scenario">
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,3,4</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '1'), ('Browser', 'chrome'), ('Username', 'l’après-midi'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:31:56.268" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C81EF98&gt;</msg>
+<status status="PASS" starttime="20200210 17:31:56.267" endtime="20200210 17:31:56.268"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:31:56.270" endtime="20200210 17:31:56.270"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:31:56.270" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:31:56.270" endtime="20200210 17:31:56.270"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:31:56.270" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:01.438" level="INFO">${Browser_index} = 6</msg>
+<status status="PASS" starttime="20200210 17:31:56.270" endtime="20200210 17:32:01.438"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:01.438" endtime="20200210 17:32:02.590"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:56.265" endtime="20200210 17:32:02.591"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:02.592" endtime="20200210 17:32:04.811"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:56.262" endtime="20200210 17:32:04.811"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '3'), ('Browser', 'chrome'), ('Username', 'ghi'), ('Password', '789')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:04.811" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C924A58&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:04.811" endtime="20200210 17:32:04.811"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:04.811" endtime="20200210 17:32:04.827"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:04.827" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:04.827" endtime="20200210 17:32:04.827"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:04.827" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:09.907" level="INFO">${Browser_index} = 7</msg>
+<status status="PASS" starttime="20200210 17:32:04.827" endtime="20200210 17:32:09.907"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:09.907" endtime="20200210 17:32:11.036"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:04.811" endtime="20200210 17:32:11.036"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:11.036" endtime="20200210 17:32:13.265"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:04.811" endtime="20200210 17:32:13.265"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '4'), ('Browser', 'chrome'), ('Username', 'abc'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:13.265" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C919828&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:13.265" endtime="20200210 17:32:13.265"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:13.281" endtime="20200210 17:32:13.281"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:13.281" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:13.281" endtime="20200210 17:32:13.281"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:13.281" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:18.067" level="INFO">${Browser_index} = 8</msg>
+<status status="PASS" starttime="20200210 17:32:13.281" endtime="20200210 17:32:18.067"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:18.067" endtime="20200210 17:32:19.199"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:13.265" endtime="20200210 17:32:19.199"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:19.199" endtime="20200210 17:32:21.403"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:13.265" endtime="20200210 17:32:21.403"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.403" level="INFO">Execute Template With Multiple Data keyword passed for all the data</msg>
+<status status="PASS" starttime="20200210 17:31:56.239" endtime="20200210 17:32:21.403"></status>
+</kw>
+<kw name="Return Value From Template" library="GenericLib">
+<doc>|Usage|
+ Used to return value from 'Execute Template With Multiple Data' keyword if the passed template or keyword is returning any value</doc>
+<assign>
+<var>${Browser}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.403" level="INFO">${Browser} = OrderedDict([('1', 'chrome'), ('3', 'chrome'), ('4', 'chrome')])</msg>
+<status status="PASS" starttime="20200210 17:32:21.403" endtime="20200210 17:32:21.403"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:31:56.238" endtime="20200210 17:32:21.403" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t7" name="Show Report False - All Failed -- Negitive Scenario">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data</arg>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=2,5,8</arg>
+<arg>show_report=false</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=2,5,8</arg>
+<arg>show_report=false</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '2'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.447" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C924B70&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:21.447" endtime="20200210 17:32:21.447"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:21.447" endtime="20200210 17:32:21.447"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.447" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:21.447" endtime="20200210 17:32:21.447"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.447" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:32:21.447" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:32:21.447" endtime="20200210 17:32:21.447"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.447" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:32:21.447" endtime="20200210 17:32:21.447"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.432" endtime="20200210 17:32:21.447"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.432" endtime="20200210 17:32:21.466"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '5'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.471" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C92CF28&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:21.471" endtime="20200210 17:32:21.471"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:21.471" endtime="20200210 17:32:21.471"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.471" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:21.471" endtime="20200210 17:32:21.471"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.471" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:32:21.471" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:32:21.471" endtime="20200210 17:32:21.471"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.471" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:32:21.471" endtime="20200210 17:32:21.471"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.469" endtime="20200210 17:32:21.471"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.467" endtime="20200210 17:32:21.487"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '8'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.487" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C92C748&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.487"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.487"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.487" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.487"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.487" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:32:21.487" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.487"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.503" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.503"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.503"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:21.487" endtime="20200210 17:32:21.503"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.503" level="FAIL">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="FAIL" starttime="20200210 17:32:21.416" endtime="20200210 17:32:21.503"></status>
+</kw>
+<msg timestamp="20200210 17:32:21.503" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20200210 17:32:21.416" endtime="20200210 17:32:21.503"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Status}'=='False'</arg>
+<arg>Log</arg>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<msg timestamp="20200210 17:32:21.503" level="INFO">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="PASS" starttime="20200210 17:32:21.503" endtime="20200210 17:32:21.503"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:21.503" endtime="20200210 17:32:21.503"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:21.415" endtime="20200210 17:32:21.503" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t8" name="Show Report False - Passed and Failed -- Negitive Scenario">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data</arg>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,2,3</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,2,3</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '1'), ('Browser', 'chrome'), ('Username', 'l’après-midi'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.534" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C93D278&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:21.534" endtime="20200210 17:32:21.534"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:21.534" endtime="20200210 17:32:21.534"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.534" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:21.534" endtime="20200210 17:32:21.534"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:21.534" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:26.472" level="INFO">${Browser_index} = 9</msg>
+<status status="PASS" starttime="20200210 17:32:21.534" endtime="20200210 17:32:26.472"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:26.473" endtime="20200210 17:32:27.611"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:21.519" endtime="20200210 17:32:27.611"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:27.615" endtime="20200210 17:32:29.749"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:21.519" endtime="20200210 17:32:29.749"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '2'), ('Browser', 'chrome1'), ('Username', 'def'), ('Password', '456')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.749" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C92CCC0&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:29.749" endtime="20200210 17:32:29.749"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:29.749" endtime="20200210 17:32:29.749"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.764" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:29.749" endtime="20200210 17:32:29.764"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.764" level="INFO">Opening browser 'chrome1' to base url 'https://www.google.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibraryExtended">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200210 17:32:29.764" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200210 17:32:29.764" endtime="20200210 17:32:29.764"></status>
+</kw>
+<msg timestamp="20200210 17:32:29.764" level="FAIL">ValueError: chrome1 is not a supported browser.</msg>
+<status status="FAIL" starttime="20200210 17:32:29.764" endtime="20200210 17:32:29.764"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:29.749" endtime="20200210 17:32:29.764"></status>
+</kw>
+<status status="FAIL" starttime="20200210 17:32:29.749" endtime="20200210 17:32:29.764"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '3'), ('Browser', 'chrome'), ('Username', 'ghi'), ('Password', '789')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.784" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C949F60&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:29.783" endtime="20200210 17:32:29.784"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:29.786" endtime="20200210 17:32:29.786"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.786" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:29.786" endtime="20200210 17:32:29.786"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:29.786" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:35.110" level="INFO">${Browser_index} = 10</msg>
+<status status="PASS" starttime="20200210 17:32:29.786" endtime="20200210 17:32:35.110"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:35.110" endtime="20200210 17:32:36.225"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:29.781" endtime="20200210 17:32:36.225"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:36.225" endtime="20200210 17:32:38.390"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:29.764" endtime="20200210 17:32:38.390"></status>
+</kw>
+<msg timestamp="20200210 17:32:38.390" level="FAIL">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="FAIL" starttime="20200210 17:32:21.519" endtime="20200210 17:32:38.390"></status>
+</kw>
+<msg timestamp="20200210 17:32:38.390" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20200210 17:32:21.519" endtime="20200210 17:32:38.390"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Status}'=='False'</arg>
+<arg>Log</arg>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Execute Template With Multiple Data keyword failed for some data</arg>
+</arguments>
+<msg timestamp="20200210 17:32:38.390" level="INFO">Execute Template With Multiple Data keyword failed for some data</msg>
+<status status="PASS" starttime="20200210 17:32:38.390" endtime="20200210 17:32:38.390"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:38.390" endtime="20200210 17:32:38.390"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:21.503" endtime="20200210 17:32:38.406" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t9" name="Show Dict Values - True ++ Positive Scenario">
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,3,4</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '1'), ('Browser', 'chrome'), ('Username', 'l’après-midi'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:38.425" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C947EF0&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:38.425" endtime="20200210 17:32:38.441"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:38.441" endtime="20200210 17:32:38.441"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:38.441" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:38.441" endtime="20200210 17:32:38.441"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:38.441" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:43.328" level="INFO">${Browser_index} = 11</msg>
+<status status="PASS" starttime="20200210 17:32:38.441" endtime="20200210 17:32:43.328"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:43.328" endtime="20200210 17:32:44.461"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:38.425" endtime="20200210 17:32:44.461"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:44.461" endtime="20200210 17:32:46.650"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:38.425" endtime="20200210 17:32:46.650"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '3'), ('Browser', 'chrome'), ('Username', 'ghi'), ('Password', '789')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:46.665" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C947978&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:46.650" endtime="20200210 17:32:46.665"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:46.665" endtime="20200210 17:32:46.665"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:46.665" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:46.665" endtime="20200210 17:32:46.665"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:46.665" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:32:51.630" level="INFO">${Browser_index} = 12</msg>
+<status status="PASS" starttime="20200210 17:32:46.665" endtime="20200210 17:32:51.630"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:32:51.630" endtime="20200210 17:32:52.783"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:46.650" endtime="20200210 17:32:52.783"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:32:52.783" endtime="20200210 17:32:54.971"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:46.650" endtime="20200210 17:32:54.971"></status>
+</kw>
+<kw name="Open browser Template">
+<arguments>
+<arg>OrderedDict([('rowid', '4'), ('Browser', 'chrome'), ('Username', 'abc'), ('Password', '123')])</arg>
+</arguments>
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:32:54.971" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C92CCF8&gt;</msg>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:32:54.971"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:32:54.971"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:32:54.971" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:32:54.971"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:32:54.971" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:33:00.065" level="INFO">${Browser_index} = 13</msg>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:33:00.065"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:33:00.067" endtime="20200210 17:33:01.221"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:33:01.221"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:33:01.221" endtime="20200210 17:33:03.425"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:54.971" endtime="20200210 17:33:03.425"></status>
+</kw>
+<msg timestamp="20200210 17:33:03.425" level="INFO">Execute Template With Multiple Data keyword passed for all the data</msg>
+<status status="PASS" starttime="20200210 17:32:38.410" endtime="20200210 17:33:03.425"></status>
+</kw>
+<kw name="Return Value From Template" library="GenericLib">
+<doc>|Usage|
+ Used to return value from 'Execute Template With Multiple Data' keyword if the passed template or keyword is returning any value</doc>
+<assign>
+<var>${Browser}</var>
+</assign>
+<msg timestamp="20200210 17:33:03.425" level="INFO">${Browser} = OrderedDict([('1', 'chrome'), ('3', 'chrome'), ('4', 'chrome')])</msg>
+<status status="PASS" starttime="20200210 17:33:03.425" endtime="20200210 17:33:03.425"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:32:38.409" endtime="20200210 17:33:03.425" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t10" name="Show Dict Values - False -- Negitive Scenario">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>No</arg>
+</arguments>
+<assign>
+<var>${show_dict_var}</var>
+</assign>
+<msg timestamp="20200210 17:33:03.433" level="INFO">${show_dict_var} = No</msg>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:03.433"></status>
+</kw>
+<kw name="Execute Template With Multiple Data" library="GenericLib">
+<doc>| Usage |
+ This keyword is used to run template with multiple data.</doc>
+<arguments>
+<arg>Open browser Template</arg>
+<arg>${DatasetPath}</arg>
+<arg>datarow=1,3,4</arg>
+<arg>show_list_of_column_names=@{ColumnDict}</arg>
+</arguments>
+<kw name="Open browser Template">
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:33:03.433" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C949BA8&gt;</msg>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:03.433"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:03.449"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:33:03.449" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:33:03.449" endtime="20200210 17:33:03.449"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:33:03.449" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:33:08.451" level="INFO">${Browser_index} = 14</msg>
+<status status="PASS" starttime="20200210 17:33:03.449" endtime="20200210 17:33:08.451"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:33:08.467" endtime="20200210 17:33:09.606"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:09.606"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:33:09.606" endtime="20200210 17:33:11.810"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:11.810"></status>
+</kw>
+<kw name="Open browser Template">
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:33:11.810" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C9193C8&gt;</msg>
+<status status="PASS" starttime="20200210 17:33:11.810" endtime="20200210 17:33:11.810"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:11.826" endtime="20200210 17:33:11.826"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:33:11.826" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:33:11.826" endtime="20200210 17:33:11.826"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:33:11.826" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:33:16.823" level="INFO">${Browser_index} = 15</msg>
+<status status="PASS" starttime="20200210 17:33:11.826" endtime="20200210 17:33:16.823"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:33:16.838" endtime="20200210 17:33:17.980"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:11.810" endtime="20200210 17:33:17.980"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:33:17.980" endtime="20200210 17:33:20.183"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:11.810" endtime="20200210 17:33:20.183"></status>
+</kw>
+<kw name="Open browser Template">
+<kw name="Launch Browser in headless">
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>&amp;{Alldata}[Browser]</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${browser_options}</var>
+</assign>
+<msg timestamp="20200210 17:33:20.183" level="INFO">${browser_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002477C92CEB8&gt;</msg>
+<status status="PASS" starttime="20200210 17:33:20.183" endtime="20200210 17:33:20.183"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:20.183" endtime="20200210 17:33:20.199"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${browser_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20200210 17:33:20.199" level="INFO">${options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'prefs': {'download.prompt_for_download': True}, 'extensions': [], 'args': ['--headless']}}</msg>
+<status status="PASS" starttime="20200210 17:33:20.199" endtime="20200210 17:33:20.199"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<arg>desired_capabilities=${options}</arg>
+</arguments>
+<assign>
+<var>${Browser_index}</var>
+</assign>
+<msg timestamp="20200210 17:33:20.199" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20200210 17:33:25.566" level="INFO">${Browser_index} = 16</msg>
+<status status="PASS" starttime="20200210 17:33:20.199" endtime="20200210 17:33:25.566"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200210 17:33:25.566" endtime="20200210 17:33:26.732"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:20.183" endtime="20200210 17:33:26.732"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibraryExtended">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 17:33:26.732" endtime="20200210 17:33:28.950"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:20.183" endtime="20200210 17:33:28.950"></status>
+</kw>
+<msg timestamp="20200210 17:33:28.950" level="INFO">Execute Template With Multiple Data keyword passed for all the data</msg>
+<status status="PASS" starttime="20200210 17:33:03.433" endtime="20200210 17:33:28.950"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:03.432" endtime="20200210 17:33:28.950" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t11" name="Compare Xls Or Xlsx ++ Positive Scenario">
+<kw name="Compare Xls Or Xlsx" library="GenericLib">
+<doc>Used to compare xls and xlsx file.</doc>
+<arguments>
+<arg>${DatasetPath1}</arg>
+<arg>${DatasetPath2}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:28.954" endtime="20200210 17:33:28.954"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:28.953" endtime="20200210 17:33:28.954" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t12" name="Compare Xls Or Xlsx -- Negitive Scenario">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Compare Xls Or Xlsx</arg>
+<arg>${DatasetPath2}</arg>
+<arg>${DatasetPath3}</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<kw name="Compare Xls Or Xlsx" library="GenericLib">
+<doc>Used to compare xls and xlsx file.</doc>
+<arguments>
+<arg>${DatasetPath2}</arg>
+<arg>${DatasetPath3}</arg>
+</arguments>
+<msg timestamp="20200210 17:33:28.970" level="FAIL">Files are different.
+...................................
+Row 7 Col 4 - 789.0 != 
+Row 8 Col 4 - 123.0 != 
+Row 9 Col 4 - 456.0 != 
+Row 10 Col 4 - 789.0 != 
+</msg>
+<status status="FAIL" starttime="20200210 17:33:28.954" endtime="20200210 17:33:28.970"></status>
+</kw>
+<msg timestamp="20200210 17:33:28.970" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20200210 17:33:28.954" endtime="20200210 17:33:28.970"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Status}'=='False'</arg>
+<arg>Log</arg>
+<arg>Files are different</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Files are different</arg>
+</arguments>
+<msg timestamp="20200210 17:33:28.970" level="INFO">Files are different</msg>
+<status status="PASS" starttime="20200210 17:33:28.970" endtime="20200210 17:33:28.970"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:28.970" endtime="20200210 17:33:28.970"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:28.954" endtime="20200210 17:33:28.970" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t13" name="Convert Csv To Xlsx">
+<kw name="Convert Csv To Xlsx" library="GenericLib">
+<doc>This keyword converts a file format from csv to xlsx</doc>
+<arguments>
+<arg>${csvfile}</arg>
+<arg>${xlsxfile}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:28.970" endtime="20200210 17:33:29.482"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:28.970" endtime="20200210 17:33:29.482" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t14" name="Delete File If Exist">
+<kw name="Delete File If Exist" library="GenericLib">
+<doc>This keyword is used to delete a file with "filename". It deletes the file only if it exist in the location</doc>
+<arguments>
+<arg>${xlsxfile}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:29.482" endtime="20200210 17:33:29.482"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:29.482" endtime="20200210 17:33:29.482" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t15" name="Decode url">
+<kw name="Url Decoder" library="GenericLib">
+<doc>| Usage |
+It takes encoded url directly or location of file where url is present and returns the decoded url as an output.</doc>
+<arguments>
+<arg>url=${EncededURL}</arg>
+</arguments>
+<assign>
+<var>${Decoded_url}</var>
+</assign>
+<msg timestamp="20200210 17:33:29.497" level="INFO">${Decoded_url} = https://www.finastra.com/</msg>
+<status status="PASS" starttime="20200210 17:33:29.482" endtime="20200210 17:33:29.497"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Decoded_url}</arg>
+<arg>${ExpectedURL}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.497"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:29.482" endtime="20200210 17:33:29.497" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t16" name="Decode url from the Filepath">
+<kw name="Url Decoder" library="GenericLib">
+<doc>| Usage |
+It takes encoded url directly or location of file where url is present and returns the decoded url as an output.</doc>
+<arguments>
+<arg>${EncodedURLPath}</arg>
+</arguments>
+<assign>
+<var>${Decoded_url}</var>
+</assign>
+<msg timestamp="20200210 17:33:29.497" level="INFO">${Decoded_url} = https://www.finastra.com/</msg>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.497"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Decoded_url}</arg>
+<arg>${ExpectedURL}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.497"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.497" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t17" name="Build Hash">
+<kw name="Build Hash" library="GenericLib">
+<doc>| Usage |
+It is used to get the hash value for the input of any string and returns the encoded value</doc>
+<arguments>
+<arg>${HashValue}</arg>
+</arguments>
+<assign>
+<var>${return_value}</var>
+</assign>
+<msg timestamp="20200210 17:33:29.513" level="INFO">${return_value} = 21162102</msg>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.514"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:29.497" endtime="20200210 17:33:29.514" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t18" name="Get Data From Property File">
+<kw name="Get Data From Property File" library="GenericLib">
+<doc>| Usage |
+Gets data from .property file and returns dictionary.
+For more information on dictionary: https://github.com/robotframework/robotframework/blob/master/atest/testdata/standard_libraries/collections/dictionary.robot
+| Arguents |
+'file_name' = .property file location
+    Example:
+        |***TestCases*** |
+        ${dict} | Get Data From Property File | ${filename}
+        ${value} | Get From Dictionary | ${dict} | ${key}</doc>
+<arguments>
+<arg>${SamplePropertyFile}</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20200210 17:33:29.519" level="INFO">${dict} = {x=1, y=2, z=3}</msg>
+<status status="PASS" starttime="20200210 17:33:29.517" endtime="20200210 17:33:29.519"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200210 17:33:29.519" level="INFO">${value} = 3</msg>
+<status status="PASS" starttime="20200210 17:33:29.519" endtime="20200210 17:33:29.519"></status>
+</kw>
+<status status="PASS" starttime="20200210 17:33:29.515" endtime="20200210 17:33:29.519" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200210 17:31:08.948" endtime="20200210 17:33:29.519"></status>
+</suite>
+<status status="PASS" starttime="20200210 17:31:08.947" endtime="20200210 17:33:29.535"></status>
+</suite>
+<status status="PASS" starttime="20200210 17:31:08.913" endtime="20200210 17:33:29.550"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0">Critical Tests</stat>
+<stat pass="18" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" id="s1" name="GenericLibRobotTests">GenericLibRobotTests</stat>
+<stat pass="18" fail="0" id="s1-s1" name="GenericLib">GenericLibRobotTests.GenericLib</stat>
+<stat pass="18" fail="0" id="s1-s1-s1" name="GenericLib">GenericLibRobotTests.GenericLib.GenericLib</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

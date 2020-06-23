@@ -1,0 +1,42 @@
+Category Combinations,Households,Households Total %,Deposit Balance,Loan Balance,Average Profit,LocationName
+Checking,"1,902",25.56,"11,198,695",0,"21,260",Demo First Financial
+"Checking, Savings",992,13.33,"9,588,538",0,"6,020",Demo First Financial
+Savings,891,11.98,"3,532,132",0,"3,907",Demo First Financial
+CD,455,6.12,"18,826,490",0,147,Demo First Financial
+Money Market,410,5.51,"29,175,312",0,"-10,037",Demo First Financial
+Commercial Checking,352,4.73,"7,154,994",0,"9,692",Demo First Financial
+Commercial Loans,274,3.68,0,"58,004,251",143,Demo First Financial
+"Checking, Money Market",206,2.77,"27,384,624",0,"-3,877",Demo First Financial
+"Commercial Checking, Commercial Loans",206,2.77,"7,189,897","47,353,833","3,666",Demo First Financial
+"CD, Savings",179,2.41,"5,218,040",0,"1,080",Demo First Financial
+Mortgage,116,1.56,0,"13,432,872",0,Demo First Financial
+"CD, Checking",108,1.45,"4,503,006",0,86,Demo First Financial
+"CD, Money Market",94,1.26,"13,326,341",0,"-1,716",Demo First Financial
+"Checking, Home Equity",90,1.21,"385,918","1,805,831","4,040",Demo First Financial
+Home Equity,86,1.16,0,"2,415,562","9,154",Demo First Financial
+"Checking, Mortgage",80,1.08,"276,024","7,327,816",323,Demo First Financial
+"Commercial Checking, Savings",78,1.05,"2,182,991",0,"5,157",Demo First Financial
+Retirement Savings,70,0.94,"1,190,951",0,0,Demo First Financial
+Consumer Loan,69,0.93,0,"587,360",16,Demo First Financial
+"Savings, Home Equity",69,0.93,"189,775","1,133,335","2,669",Demo First Financial
+"Savings, Mortgage",69,0.93,"166,054","5,854,024",96,Demo First Financial
+"Checking, Consumer Loan",66,0.89,"112,497","483,875",206,Demo First Financial
+"Checking, Commercial Loans",62,0.83,"1,016,539","6,539,718",227,Demo First Financial
+Auto Loan,56,0.75,0,"390,925",200,Demo First Financial
+"Checking, Auto Loan",52,0.7,"63,319","351,964",268,Demo First Financial
+"Savings, Commercial Loans",49,0.66,"272,680","5,566,639",135,Demo First Financial
+"Checking, Retirement Savings",33,0.44,"2,119,049",0,120,Demo First Financial
+"Money Market, Savings",31,0.42,"1,802,720",0,-13,Demo First Financial
+"CD, Retirement Savings",29,0.39,"1,589,775",0,1,Demo First Financial
+"Savings, Auto Loan",29,0.39,"39,083","215,938",23,Demo First Financial
+"Savings, Consumer Loan",25,0.34,"34,868","298,794",18,Demo First Financial
+"Money Market, Commercial Loans",20,0.27,"2,638,591","10,009,752",-241,Demo First Financial
+"Money Market, Mortgage",14,0.19,"268,539","2,171,731",-31,Demo First Financial
+"Home Equity, Mortgage",13,0.17,0,"1,633,539",644,Demo First Financial
+"CD, Commercial Checking",12,0.16,"3,717,170",0,721,Demo First Financial
+"Checking, Savings, Home Equity",11,0.15,"101,495","98,060",208,Demo First Financial
+"Commercial Checking, Money Market",11,0.15,"2,619,821",0,395,Demo First Financial
+"Money Market, Home Equity",10,0.13,"207,775","125,735",196,Demo First Financial
+"Auto Loan, Consumer Loan",9,0.12,0,"119,534",0,Demo First Financial
+"CD, Commercial Loans",9,0.12,"867,511","5,032,190",0,Demo First Financial
+Total,"7,337",98.62,"158,961,214","170,953,279",0, 

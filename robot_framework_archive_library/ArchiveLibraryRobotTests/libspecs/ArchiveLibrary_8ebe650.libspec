@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="ArchiveLibrary" type="library" format="ROBOT" generated="20200204 20:17:00">
+<version></version>
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>ArchiveLibrary is a robot framework keyword library to
+handle ZIP and possibly other archive formats.</doc>
+<kw name="Archive Should Contain File">
+<arguments>
+<arg>zfile</arg>
+<arg>filename</arg>
+</arguments>
+<doc>Check if a file exists in the ZIP file without extracting it
+
+`zfile` the path to the ZIP file
+
+`filename` name of the file to search for in `zfile`</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Create Compressed File From Files In Directory">
+<arguments>
+<arg>directory</arg>
+<arg>compressed_file_path</arg>
+<arg>sub_directories=False</arg>
+</arguments>
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.
+
+|Arguments|
+directory: Path to the directory that holds our files.
+compressed_file_path: Path to store our destination package (zip, tar, war, jar, ear).
+sub_directories: Shall files in sub-directories be included - False by default.
+
+|Example|
+*** Variables ***
+${directory}    D:/extractedjardata
+*** Test Cases ***
+Create Compressed File From Files In Directory    ${directory}   C:/BOHistoryDetails.jar</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Extract File">
+<arguments>
+<arg>compressed_file_path</arg>
+<arg>destination=None</arg>
+</arguments>
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.
+
+|Arguments|
+file: Path to the package (zip, tar, war, jar, ear).
+dest: Destination path to extract the package. By default takes current directory.
+
+|Example|
+*** Variables ***
+${destination}    D:/extracted_data
+*** Test Cases ***
+Extract File    C:/Uxp.war    ${destination}</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>

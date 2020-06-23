@@ -1,0 +1,8 @@
+setup.py
+PDFLibrary/PDFLibrary.py
+PDFLibrary/__init__.py
+PDFLibrary/version.py
+PDFLibrary.egg-info/PKG-INFO
+PDFLibrary.egg-info/SOURCES.txt
+PDFLibrary.egg-info/dependency_links.txt
+PDFLibrary.egg-info/top_level.txt

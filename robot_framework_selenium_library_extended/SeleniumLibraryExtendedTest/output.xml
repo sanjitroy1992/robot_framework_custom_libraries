@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.3 on win32)" generated="20200207 18:26:21.421" rpa="false">
+<suite id="s1" name="SeleniumLibraryExtendedTest" source="D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest">
+<suite id="s1-s1" name="Selenium" source="D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\Selenium">
+<suite id="s1-s1-s1" name="SeleniumLibraryExtendedLib" source="D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\Selenium\SeleniumLibraryExtendedLib.robot">
+<test id="s1-s1-s1-t1" name="Activate And Input Text and Scroll Element Into View keyword">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200207 18:26:21.917" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20200207 18:26:21.916" endtime="20200207 18:26:28.456"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:26:28.458" endtime="20200207 18:26:29.582"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibraryExtended">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${search_box_field}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:26:29.583" endtime="20200207 18:26:29.598"></status>
+</kw>
+<kw name="Activate And Input Text" library="SeleniumLibraryExtended">
+<doc>Used to activate element specified by 'locator' and then enter 'text'.</doc>
+<arguments>
+<arg>${search_box_field}</arg>
+<arg>Finastra</arg>
+</arguments>
+<msg timestamp="20200207 18:26:29.599" level="INFO">Double clicking element 'xpath=//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20200207 18:26:29.598" endtime="20200207 18:26:29.720"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibraryExtended">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200207 18:26:29.722" level="INFO">Sending key(s) ('ENTER',) to //input[@name="q"] element.</msg>
+<msg timestamp="20200207 18:26:29.734" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200207 18:26:29.722" endtime="20200207 18:26:31.864"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibraryExtended">
+<doc>Scrolls an element from given ``locator`` into view.</doc>
+<arguments>
+<arg>${other_options}</arg>
+</arguments>
+<msg timestamp="20200207 18:26:31.867" level="INFO">Scrolling element '//*[text()="Finastra - Wikipedia"]' into view.</msg>
+<status status="PASS" starttime="20200207 18:26:31.865" endtime="20200207 18:26:31.908"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:26:31.908" endtime="20200207 18:26:34.213"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:26:21.915" endtime="20200207 18:26:34.213" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Print Pdf -- PDF print ff">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20200207 18:26:34.216" level="INFO">Opening browser 'ff' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20200207 18:26:34.219" level="INFO">Firefox driver log is always forced to to: D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\geckodriver-10.log</msg>
+<status status="PASS" starttime="20200207 18:26:34.215" endtime="20200207 18:26:43.908"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:26:43.909" endtime="20200207 18:26:44.178"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibraryExtended">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>sample pdf</arg>
+</arguments>
+<msg timestamp="20200207 18:26:44.179" level="INFO">Typing text 'sample pdf' into text field '//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20200207 18:26:44.179" endtime="20200207 18:26:44.298"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibraryExtended">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200207 18:26:44.301" level="INFO">Sending key(s) ('ENTER',) to //input[@name="q"] element.</msg>
+<msg timestamp="20200207 18:26:44.316" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200207 18:26:44.300" endtime="20200207 18:26:44.355"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibraryExtended">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:26:44.357" endtime="20200207 18:26:45.052"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibraryExtended">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+</arguments>
+<msg timestamp="20200207 18:26:45.054" level="INFO">Clicking link '//a[@href="http://www.pdf995.com/samples/pdf.pdf"]'.</msg>
+<status status="PASS" starttime="20200207 18:26:45.054" endtime="20200207 18:26:45.698"></status>
+</kw>
+<kw name="Print Pdf" library="SeleniumLibraryExtended">
+<doc>Prints a pdf by clicking on a particular link that opens the pdf.
+Supported browsers are IE, Chrome and firefox.
+            Arguments:
+            - No arguments are required. It automatically prints the pdf file based on the currently invoked browser.</doc>
+<msg timestamp="20200207 18:26:53.938" level="INFO">KeyboardLibrary library initialised</msg>
+<status status="PASS" starttime="20200207 18:26:45.699" endtime="20200207 18:26:53.939"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200207 18:27:03.941" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200207 18:26:53.940" endtime="20200207 18:27:03.941"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:27:03.941" endtime="20200207 18:27:04.907"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:26:34.214" endtime="20200207 18:27:04.907" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Print Pdf -- PDF print chrome">
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200207 18:27:04.910" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20200207 18:27:04.909" endtime="20200207 18:27:11.134"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:27:11.135" endtime="20200207 18:27:12.293"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibraryExtended">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>sample pdf</arg>
+</arguments>
+<msg timestamp="20200207 18:27:12.296" level="INFO">Typing text 'sample pdf' into text field '//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20200207 18:27:12.295" endtime="20200207 18:27:12.427"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibraryExtended">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200207 18:27:12.429" level="INFO">Sending key(s) ('ENTER',) to //input[@name="q"] element.</msg>
+<msg timestamp="20200207 18:27:12.439" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200207 18:27:12.429" endtime="20200207 18:27:13.520"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibraryExtended">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:27:13.521" endtime="20200207 18:27:13.553"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibraryExtended">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+</arguments>
+<msg timestamp="20200207 18:27:13.554" level="INFO">Clicking link '//a[@href="http://www.pdf995.com/samples/pdf.pdf"]'.</msg>
+<status status="PASS" starttime="20200207 18:27:13.553" endtime="20200207 18:27:14.112"></status>
+</kw>
+<kw name="Print Pdf" library="SeleniumLibraryExtended">
+<doc>Prints a pdf by clicking on a particular link that opens the pdf.
+Supported browsers are IE, Chrome and firefox.
+            Arguments:
+            - No arguments are required. It automatically prints the pdf file based on the currently invoked browser.</doc>
+<msg timestamp="20200207 18:27:22.116" level="INFO">KeyboardLibrary library initialised</msg>
+<status status="PASS" starttime="20200207 18:27:14.114" endtime="20200207 18:27:22.116"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200207 18:27:32.118" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200207 18:27:22.117" endtime="20200207 18:27:32.118"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:27:32.119" endtime="20200207 18:27:34.394"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:27:04.908" endtime="20200207 18:27:34.396" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Download Pdf -- PDF download ff">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\SeleniumLibraryExtendedTest\\Selenium\\SampleData\\Firefox</arg>
+</arguments>
+<msg timestamp="20200207 18:27:34.405" level="INFO">D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\Selenium\SampleData\Firefox</msg>
+<status status="PASS" starttime="20200207 18:27:34.403" endtime="20200207 18:27:34.406"></status>
+</kw>
+<kw name="Open Firefox Browser by setting download path">
+<doc>This keyword opens the firefox browser by setting the download folder location mentioned in the argument ${FolderLocation}.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>D:\\UFT_Project_Workspace\\SeleniumLibraryExtendedTest\\Selenium\\SampleData\\Firefox</arg>
+</arguments>
+<kw name="Set Firefox Profile And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to set firefox profile with the options to set the default download directory and to launch in headless mode.</doc>
+<arguments>
+<arg>ff</arg>
+<arg>${FolderLocation}</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20200207 18:27:34.424" level="INFO">${var1} = C:\Users\sanjiroy\AppData\Local\Temp\tmpcyt9_gml</msg>
+<status status="PASS" starttime="20200207 18:27:34.414" endtime="20200207 18:27:34.424"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>Firefox</arg>
+<arg>ff_profile_dir=${var1}</arg>
+</arguments>
+<msg timestamp="20200207 18:27:34.426" level="INFO">Opening browser 'Firefox' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20200207 18:27:34.445" level="INFO">Firefox driver log is always forced to to: D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\geckodriver-11.log</msg>
+<status status="PASS" starttime="20200207 18:27:34.426" endtime="20200207 18:27:44.095"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:27:44.096" endtime="20200207 18:27:44.379"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:27:34.410" endtime="20200207 18:27:44.379"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:27:44.381" endtime="20200207 18:27:44.389"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibraryExtended">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>sample pdf</arg>
+</arguments>
+<msg timestamp="20200207 18:27:44.392" level="INFO">Typing text 'sample pdf' into text field '//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20200207 18:27:44.391" endtime="20200207 18:27:44.527"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibraryExtended">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200207 18:27:44.532" level="INFO">Sending key(s) ('ENTER',) to //input[@name="q"] element.</msg>
+<msg timestamp="20200207 18:27:44.550" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200207 18:27:44.531" endtime="20200207 18:27:44.587"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibraryExtended">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:27:44.589" endtime="20200207 18:27:45.168"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibraryExtended">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+</arguments>
+<msg timestamp="20200207 18:27:45.170" level="INFO">Clicking link '//a[@href="http://www.pdf995.com/samples/pdf.pdf"]'.</msg>
+<status status="PASS" starttime="20200207 18:27:45.170" endtime="20200207 18:27:52.547"></status>
+</kw>
+<kw name="Download Pdf" library="SeleniumLibraryExtended">
+<doc>Downloads a pdf by clicking on a particular link that opens the pdf.
+Supported browsers are IE, Chrome and firefox.
+    Arguments:
+    - For chrome and firefox browser, no arguments are required. It automatically downloads the pdf file
+        based on the currently invoked browser.
+    - filename: Needed only for IE browser. This argument specifies the full name of the file in which user
+                wants to save the pdf, along with it's location.
+    Pre-conditions:</doc>
+<msg timestamp="20200207 18:27:54.833" level="INFO">KeyboardLibrary library initialised</msg>
+<status status="PASS" starttime="20200207 18:27:52.549" endtime="20200207 18:27:54.834"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200207 18:27:56.841" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:27:54.838" endtime="20200207 18:27:56.843"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:27:56.845" endtime="20200207 18:27:57.909"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:27:34.398" endtime="20200207 18:27:57.909" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="Download Pdf -- PDF download chrome">
+<kw name="Open Chrome Browser by setting download path">
+<doc>This keyword opens the chrome browser by setting the download folder location mentioned in the argument ${FolderLocation}.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>D:\\UFT_Project_Workspace\\SeleniumLibraryExtendedTest\\Selenium\\SampleData\\Chrome</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>plugins.always_open_pdf_externally=${TRUE}</arg>
+<arg>download.default_directory=${FolderLocation}</arg>
+</arguments>
+<assign>
+<var>${prefs}</var>
+</assign>
+<msg timestamp="20200207 18:27:57.913" level="INFO">${prefs} = {'plugins.always_open_pdf_externally': True, 'download.default_directory': 'D:\\UFT_Project_Workspace\\SeleniumLibraryExtendedTest\\Selenium\\SampleData\\Chrome'}</msg>
+<status status="PASS" starttime="20200207 18:27:57.912" endtime="20200207 18:27:57.913"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg timestamp="20200207 18:27:57.914" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000149A0DCF828&gt;</msg>
+<status status="PASS" starttime="20200207 18:27:57.914" endtime="20200207 18:27:57.914"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:27:57.915" endtime="20200207 18:27:57.915"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibraryExtended">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome options}</arg>
+</arguments>
+<msg timestamp="20200207 18:27:57.917" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200207 18:27:57.916" endtime="20200207 18:28:02.547"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:28:02.549" endtime="20200207 18:28:03.670"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibraryExtended">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:03.672" level="INFO">Opening url 'https://www.google.com/'</msg>
+<status status="PASS" starttime="20200207 18:28:03.672" endtime="20200207 18:28:04.530"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:27:57.911" endtime="20200207 18:28:04.531"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:28:04.532" endtime="20200207 18:28:04.538"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibraryExtended">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>sample pdf</arg>
+</arguments>
+<msg timestamp="20200207 18:28:04.540" level="INFO">Typing text 'sample pdf' into text field '//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20200207 18:28:04.539" endtime="20200207 18:28:04.766"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibraryExtended">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//input[@name="q"]</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200207 18:28:04.769" level="INFO">Sending key(s) ('ENTER',) to //input[@name="q"] element.</msg>
+<msg timestamp="20200207 18:28:04.788" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200207 18:28:04.767" endtime="20200207 18:28:05.953"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibraryExtended">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:28:05.955" endtime="20200207 18:28:06.007"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibraryExtended">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="http://www.pdf995.com/samples/pdf.pdf"]</arg>
+</arguments>
+<msg timestamp="20200207 18:28:06.009" level="INFO">Clicking link '//a[@href="http://www.pdf995.com/samples/pdf.pdf"]'.</msg>
+<status status="PASS" starttime="20200207 18:28:06.009" endtime="20200207 18:28:06.554"></status>
+</kw>
+<kw name="Download Pdf" library="SeleniumLibraryExtended">
+<doc>Downloads a pdf by clicking on a particular link that opens the pdf.
+Supported browsers are IE, Chrome and firefox.
+    Arguments:
+    - For chrome and firefox browser, no arguments are required. It automatically downloads the pdf file
+        based on the currently invoked browser.
+    - filename: Needed only for IE browser. This argument specifies the full name of the file in which user
+                wants to save the pdf, along with it's location.
+    Pre-conditions:</doc>
+<msg timestamp="20200207 18:28:06.556" level="INFO">KeyboardLibrary library initialised</msg>
+<status status="PASS" starttime="20200207 18:28:06.556" endtime="20200207 18:28:06.557"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200207 18:28:08.560" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:28:06.558" endtime="20200207 18:28:08.560"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:28:08.561" endtime="20200207 18:28:10.834"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:27:57.910" endtime="20200207 18:28:10.835" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="Chrome download test in UI mode">
+<kw name="Create Chrome Webdriver And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to create chrome webdriver with the options to set the default download directory and to launch in headless mode.
+By default the screen size for the browser is set to maximize.</doc>
+<arguments>
+<arg>chrome</arg>
+<arg>${DownloadDir}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:10.844" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200207 18:28:10.840" endtime="20200207 18:28:15.269"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibraryExtended">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:15.271" level="INFO">Opening url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'</msg>
+<status status="PASS" starttime="20200207 18:28:15.270" endtime="20200207 18:28:24.932"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 18:28:26.936" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:28:24.934" endtime="20200207 18:28:26.937"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:26.942" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" starttime="20200207 18:28:26.940" endtime="20200207 18:28:27.335"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200207 18:28:31.338" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200207 18:28:27.336" endtime="20200207 18:28:31.338"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:28:31.339" endtime="20200207 18:28:33.669"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:28:10.837" endtime="20200207 18:28:33.669" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t7" name="Chrome download test in headless mode">
+<kw name="Create Chrome Webdriver And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to create chrome webdriver with the options to set the default download directory and to launch in headless mode.
+By default the screen size for the browser is set to maximize.</doc>
+<arguments>
+<arg>chrome</arg>
+<arg>${DownloadDir}</arg>
+<arg>headless_mode=Yes</arg>
+</arguments>
+<msg timestamp="20200207 18:28:33.672" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200207 18:28:33.671" endtime="20200207 18:28:36.962"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibraryExtended">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:36.964" level="INFO">Opening url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'</msg>
+<status status="PASS" starttime="20200207 18:28:36.963" endtime="20200207 18:28:44.108"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 18:28:46.113" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:28:44.111" endtime="20200207 18:28:46.114"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:46.120" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" starttime="20200207 18:28:46.117" endtime="20200207 18:28:46.501"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200207 18:28:50.504" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200207 18:28:46.503" endtime="20200207 18:28:50.505"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:28:50.507" endtime="20200207 18:28:52.735"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:28:33.670" endtime="20200207 18:28:52.735" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t8" name="Firefox download test in UI mode">
+<kw name="Set Firefox Profile And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to set firefox profile with the options to set the default download directory and to launch in headless mode.</doc>
+<arguments>
+<arg>firefox</arg>
+<arg>${DownloadDir}</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20200207 18:28:52.748" level="INFO">${var1} = C:\Users\sanjiroy\AppData\Local\Temp\tmp0bz1c_56</msg>
+<status status="PASS" starttime="20200207 18:28:52.739" endtime="20200207 18:28:52.748"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+<arg>Firefox</arg>
+<arg>ff_profile_dir=${var1}</arg>
+</arguments>
+<msg timestamp="20200207 18:28:52.751" level="INFO">Opening browser 'Firefox' to base url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'.</msg>
+<msg timestamp="20200207 18:28:52.765" level="INFO">Firefox driver log is always forced to to: D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\geckodriver-12.log</msg>
+<status status="PASS" starttime="20200207 18:28:52.750" endtime="20200207 18:29:09.527"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibraryExtended">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200207 18:29:09.529" endtime="20200207 18:29:09.828"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 18:29:11.832" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:29:09.830" endtime="20200207 18:29:11.833"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20200207 18:29:11.835" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" starttime="20200207 18:29:11.834" endtime="20200207 18:29:17.140"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200207 18:29:21.142" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200207 18:29:17.140" endtime="20200207 18:29:21.143"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:29:21.144" endtime="20200207 18:29:22.305"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:28:52.737" endtime="20200207 18:29:22.306" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t9" name="Firefox download test in headless mode">
+<kw name="Set Firefox Profile And Enable Download Directory" library="SeleniumLibraryExtended">
+<doc>Used to set firefox profile with the options to set the default download directory and to launch in headless mode.</doc>
+<arguments>
+<arg>firefox</arg>
+<arg>${DownloadDir}</arg>
+<arg>headless_mode=Yes</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20200207 18:29:22.312" level="INFO">${var1} = C:\Users\sanjiroy\AppData\Local\Temp\tmpxhozu6a7</msg>
+<status status="PASS" starttime="20200207 18:29:22.308" endtime="20200207 18:29:22.313"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibraryExtended">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${xlsx_download_link}</arg>
+<arg>Firefox</arg>
+<arg>ff_profile_dir=${var1}</arg>
+</arguments>
+<msg timestamp="20200207 18:29:22.314" level="INFO">Opening browser 'Firefox' to base url 'https://www.exceltip.com/excel-data/remove-data-validation-dropdown-list-in-cell.html/attachment/download-sample-file-xlsx'.</msg>
+<msg timestamp="20200207 18:29:22.324" level="INFO">Firefox driver log is always forced to to: D:\UFT_Project_Workspace\SeleniumLibraryExtendedTest\geckodriver-13.log</msg>
+<status status="PASS" starttime="20200207 18:29:22.314" endtime="20200207 18:29:38.158"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibraryExtended">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1080</arg>
+</arguments>
+<status status="PASS" starttime="20200207 18:29:38.160" endtime="20200207 18:29:38.188"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200207 18:29:40.190" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200207 18:29:38.190" endtime="20200207 18:29:40.191"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibraryExtended">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Download-Sample-File-xlsx}</arg>
+</arguments>
+<msg timestamp="20200207 18:29:40.198" level="INFO">Clicking element 'xpath=//a[text()="Download-Sample File-xlsx"]'.</msg>
+<status status="PASS" starttime="20200207 18:29:40.195" endtime="20200207 18:29:45.478"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20200207 18:29:49.485" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200207 18:29:45.482" endtime="20200207 18:29:49.486"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibraryExtended" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200207 18:29:49.487" endtime="20200207 18:29:50.720"></status>
+</kw>
+<status status="PASS" starttime="20200207 18:29:22.307" endtime="20200207 18:29:50.721" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200207 18:26:21.485" endtime="20200207 18:29:50.722"></status>
+</suite>
+<status status="PASS" starttime="20200207 18:26:21.483" endtime="20200207 18:29:50.730"></status>
+</suite>
+<status status="PASS" starttime="20200207 18:26:21.462" endtime="20200207 18:29:50.736"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" id="s1" name="SeleniumLibraryExtendedTest">SeleniumLibraryExtendedTest</stat>
+<stat pass="9" fail="0" id="s1-s1" name="Selenium">SeleniumLibraryExtendedTest.Selenium</stat>
+<stat pass="9" fail="0" id="s1-s1-s1" name="SeleniumLibraryExtendedLib">SeleniumLibraryExtendedTest.Selenium.SeleniumLibraryExtendedLib</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

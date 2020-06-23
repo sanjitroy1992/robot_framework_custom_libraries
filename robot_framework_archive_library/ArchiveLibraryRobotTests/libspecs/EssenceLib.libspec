@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec generated="20190826 17:25:29" type="library" name="EssenceLib" format="ROBOT">
+<version>1.0</version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>This library works for Essence Product.
+Library SeleniumLibraryExtended must be loaded prior to EssenceLib.
+
+Examples:
+| Library | SeleniumLibraryExtended |
+| Library | EssenceLib |</doc>
+<kw name="Mx Essence Traverse To Menu">
+<arguments>
+<arg>locator</arg>
+<arg>text</arg>
+<arg>list_locator=xpath=//div[@id="uxpMenuSearch_popup"]/div[@class="dijitReset dijitMenuItem"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<doc>|Usage|
+ Use to select an item from menu list in essence application
+ 
+ |Arguments|
+ 'locator'= Locator of the search box in the essence application
+ 'text'= The menu name to be clicked/selected. Text is case sensitive
+ 'list_locator'=[Optional Argument] Locator of the menu list 
+ 'timeout'=The timeout argument specifies how long to wait for the locator to appear
+ 
+ Note:list_locator is an optional argument and it takes the default value
+ If there is any change in this locator with the application upgrade, user has to give this as argument 
+ for the keyword
+ 
+ Example:
+    1.  This example shows the usage of the keyword for no changes in the list_locator in the application
+       Mx Essence Traverse To Menu    xpath=//input[@id="uxpMenuSearch"]    DeleteEncyCompBO
+    
+    2. This example shows the usage of the keyword if there is any change in the list_locator with application upgrade
+        Mx Essence Traverse To Menu    xpath=//input[@id="uxpMenuSearch"]    DeleteEncyCompBO   list_locator=xpath=//div[@id="uxpMenuSearch"]/div[@class="dijitReset"]</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Essence Verify Table And Click On Table">
+<arguments>
+<arg>headerLocator</arg>
+<arg>RowLocator</arg>
+<arg>columnData=None</arg>
+<arg>*params</arg>
+</arguments>
+<doc>|Usage|
+ To verify Table row data and click on radio button or checkbox present in row. Used in Essence application. 
+
+ If all the expected values are equal to actual values then it will click on that row and if 'columnData' is set then the keyword will enter data in the same verified row and in the column specified in 'columnData' parameter.
+
+ else it will raise an error and display which all paramters didnot matched and their expected values and actual values.
+
+ | Arguments |
+
+ 'headerLocator' = table header locator.
+
+ 'RowLocator' = table row locator
+
+ 'columnData' = Pass header name and data value to enter in that column. 
+
+                             'columnData' format : HeaderName=value [example: Payment=23] 
+
+ '*param' : It takes key=value format. 'Example TradeID=23'
+
+ First argument in *params should contain an unique element, that will be use to identify which row to be searched for comparing other parameters value.
+
+ | Example |
+| ***Variable*** |
+| @{TableDataToBeVerified} | TradeID=Cre:123 | NotionalAmount=122 |
+
+ 1. To verify and click on table row
+
+| ***TestCases*** |
+| ${verifyStatus} | Mx Essence Verify Table And Click On Table | ${headerLocator} | ${RowLocator} | @{TableDataToBeVerified} |
+| Should Be Equal As Strings | ${verifyStatus} | PASS |
+
+2. To verify,click and enter in the given table row
+
+| ***TestCases*** |
+| ${verifyStatus} | Mx Essence Verify Table And Click On Table | ${headerLocator} | ${RowLocator} | payment=600 | @{TableDataToBeVerified} |
+| Should Be Equal As Strings | ${verifyStatus} | PASS |</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>

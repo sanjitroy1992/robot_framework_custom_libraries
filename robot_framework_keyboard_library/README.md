@@ -1,0 +1,44 @@
+Keyboard
+Library scope:	test case
+Named arguments:	supported
+Introduction
+Library that simulates keyboard input.
+
+Available keys are listed below:
+
+['BACKSPACE','TAB','CLEAR','ENTER','SHIFT','CTRL','ALT','PAUSE','CAPS LOCK','CONTROL-BREAK PROCESSING', 'IME KANA MODE','IME HANGUEL MODE','IME HANGUL MODE','IME JUNJA MODE','IME FINAL MODE','IME HANJA MODE', 'IME KANJI MODE','ESC','IME CONVERT','IME NONCONVERT','IME ACCEPT','IME MODE CHANGE REQUEST','SPACEBAR', 'PAGE UP','PAGE DOWN','END','HOME','LEFT','UP','RIGHT','DOWN','SELECT','PRINT','EXECUTE','PRINT SCREEN', 'INSERT','DELETE','HELP','0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J', 'K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','LEFT WINDOWS','RIGHT WINDOWS','APPLICATIONS', 'SLEEP','0','1','2','3','4','5','6','7','8','9','*','+','SEPARATOR','-','DECIMAL','/','F1','F2','F3','F4','F5', 'F6','F7','F8','F9','F10','F11','F12','F13','F14','F15','F16','F17','F18','F19','F20','F21','F22','F23','F24', 'NUM LOCK','SCROLL LOCK','LEFT SHIFT','RIGHT SHIFT','LEFT CTRL','RIGHT CTRL','LEFT MENU','RIGHT MENU', 'BROWSER BACK','BROWSER FORWARD','BROWSER REFRESH','BROWSER STOP','BROWSER SEARCH KEY','BROWSER FAVORITES', 'BROWSER START AND HOME','VOLUME MUTE','VOLUME DOWN','VOLUME UP','NEXT TRACK','PREVIOUS TRACK','STOP MEDIA', 'PLAY/PAUSE MEDIA','START MAIL','SELECT MEDIA','START APPLICATION 1','START APPLICATION 2','+',',','-','.', 'IME PROCESS','ATTN','CRSEL','EXSEL','ERASE EOF','PLAY','ZOOM','RESERVED ','PA1','CLEAR']
+
+Shortcuts
+Native Type · Press Combination · Select All
+Keywords
+Keyword	Arguments	Documentation
+Native Type	key	
+Sends key to the current window. Use {SPACE}, {TAB}, {ENTER} for spaces, tabs and new lines and should be given in capital letters.
+
+|***TestCases*** | 1. Enter Text Native Type | Hello World
+
+2. Enter Text using {SPACE} Native Type | Hello{SPACE}World
+
+3. Enter Text using {SPACE} and press Enter button at the end. Native Type | Hello{SPACE}World{ENTER}
+
+4. Enter Text using {TAB} and press Enter button at the end. Native Type | Hello{TAB}World{ENTER}
+
+Press Combination	*keys	
+Press given keyboard keys.
+
+All keyboard keys must be prefixed with Key..
+
+Keyboard keys are case-insensitive:
+
+Available keys are listed below:
+
+['BACKSPACE','TAB','CLEAR','ENTER','SHIFT','CTRL','ALT','PAUSE','CAPS LOCK',CONTROL-BREAK PROCESSING', 'IME KANA MODE','IME HANGUEL MODE','IME HANGUL MODE','IME JUNJA MODE','IME FINAL MODE','IME HANJA MODE', 'IME KANJI MODE','ESC','IME CONVERT','IME NONCONVERT','IME ACCEPT','IME MODE CHANGE REQUEST','SPACEBAR', 'PAGE UP','PAGE DOWN','END','HOME','LEFT','UP','RIGHT','DOWN','SELECT','PRINT','EXECUTE','PRINT SCREEN', 'INSERT','DELETE','HELP','0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J', 'K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','LEFT WINDOWS','RIGHT WINDOWS','APPLICATIONS', 'SLEEP','0','1','2','3','4','5','6','7','8','9','*','+','SEPARATOR','-','DECIMAL','/','F1','F2','F3','F4','F5', 'F6','F7','F8','F9','F10','F11','F12','F13','F14','F15','F16','F17','F18','F19','F20','F21','F22','F23','F24', 'NUM LOCK','SCROLL LOCK','LEFT SHIFT','RIGHT SHIFT','LEFT CTRL','RIGHT CTRL','LEFT MENU','RIGHT MENU', 'BROWSER BACK','BROWSER FORWARD','BROWSER REFRESH','BROWSER STOP','BROWSER SEARCH KEY','BROWSER FAVORITES', 'BROWSER START AND HOME','VOLUME MUTE','VOLUME DOWN','VOLUME UP','NEXT TRACK','PREVIOUS TRACK','STOP MEDIA', 'PLAY/PAUSE MEDIA','START MAIL','SELECT MEDIA','START APPLICATION 1','START APPLICATION 2','+',',','-','.', 'IME PROCESS','ATTN','CRSEL','EXSEL','ERASE EOF','PLAY','ZOOM','RESERVED ','PA1','CLEAR']
+
+Press Combination	KEY.ENTER	
+Press Combination	KEY.CTRL	KEY.C
+Press Combination	KEY.CTRL	KEY.V
+Press Combination	KEY.END	
+See valid keyboard keys here.
+
+Select All		
+Simulates "Ctrl+A" key combination to select all elements.

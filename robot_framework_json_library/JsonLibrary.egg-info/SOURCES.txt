@@ -1,0 +1,9 @@
+setup.py
+JsonLibrary/JsonLibrary.py
+JsonLibrary/__init__.py
+JsonLibrary/jsonselect.py
+JsonLibrary/version.py
+JsonLibrary.egg-info/PKG-INFO
+JsonLibrary.egg-info/SOURCES.txt
+JsonLibrary.egg-info/dependency_links.txt
+JsonLibrary.egg-info/top_level.txt

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.3 on win32)" generated="20200204 20:20:04.772" rpa="false">
+<suite id="s1" name="ArchiveLibrary" source="D:\UFT_Project_Workspace\ArchiveLibrary">
+<suite id="s1-s1" name="ArchiveLibrary" source="D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary">
+<suite id="s1-s1-s1" name="ArchiveLibrary" source="D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\ArchiveLibrary.robot">
+<test id="s1-s1-s1-t1" name="Archive Library">
+<kw name="Empty Directory" library="OperatingSystem">
+<doc>Deletes all the content from the given directory.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1</arg>
+</arguments>
+<msg timestamp="20200204 20:20:04.877" level="INFO" html="yes">Listing contents of directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1&lt;/a&gt;'.</msg>
+<msg timestamp="20200204 20:20:04.878" level="INFO" html="yes">Emptied directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200204 20:20:04.877" endtime="20200204 20:20:04.878"></status>
+</kw>
+<kw name="Extract File" library="ArchiveLibrary">
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/archivelibrary.zip</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/zip</arg>
+</arguments>
+<msg timestamp="20200204 20:20:04.882" level="INFO" html="yes">Created directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\zip"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\zip&lt;/a&gt;'.</msg>
+<msg timestamp="20200204 20:20:04.882" level="INFO" html="yes">Directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\zip"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\zip&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20200204 20:20:04.879" endtime="20200204 20:20:04.924"></status>
+</kw>
+<kw name="Extract File" library="ArchiveLibrary">
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/xlrd.tar</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/tar</arg>
+</arguments>
+<msg timestamp="20200204 20:20:04.927" level="INFO" html="yes">Created directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\tar"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1\tar&lt;/a&gt;'.</msg>
+<msg timestamp="20200204 20:20:04.927" level="INFO" html="yes">File '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\xlrd.tar"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\xlrd.tar&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20200204 20:20:04.925" endtime="20200204 20:20:05.163"></status>
+</kw>
+<kw name="Extract File" library="ArchiveLibrary">
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/BOHistoryDetails.jar</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/jar</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:05.164" endtime="20200204 20:20:06.770"></status>
+</kw>
+<kw name="Extract File" library="ArchiveLibrary">
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/BankFusion.ear</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/ear</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:06.771" endtime="20200204 20:20:08.508"></status>
+</kw>
+<kw name="Extract File" library="ArchiveLibrary">
+<doc>|Usage|
+Extract the contents of the compressed 'file' into a 'dest' path.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/Uxp.war</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/war</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:08.509" endtime="20200204 20:20:13.657"></status>
+</kw>
+<kw name="Create Compressed File From Files In Directory" library="ArchiveLibrary">
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/zip</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder1/archivelibrary.zip</arg>
+<arg>True</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:13.658" endtime="20200204 20:20:14.562"></status>
+</kw>
+<kw name="Create Compressed File From Files In Directory" library="ArchiveLibrary">
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/tar</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder1/xlrd.tar</arg>
+<arg>True</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:14.564" endtime="20200204 20:20:15.880"></status>
+</kw>
+<kw name="Create Compressed File From Files In Directory" library="ArchiveLibrary">
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/jar</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder1/BOHistoryDetails.jar</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:15.883" endtime="20200204 20:20:16.904"></status>
+</kw>
+<kw name="Create Compressed File From Files In Directory" library="ArchiveLibrary">
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/ear</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder1/BankFusion.ear</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:16.906" endtime="20200204 20:20:19.274"></status>
+</kw>
+<kw name="Create Compressed File From Files In Directory" library="ArchiveLibrary">
+<doc>|Usage|
+Take all files specified in the 'directory' and create a compressed package from them and store it in the specified 'compressed_file_path'.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1/war</arg>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder1/Uxp.war</arg>
+</arguments>
+<status status="PASS" starttime="20200204 20:20:19.275" endtime="20200204 20:20:21.794"></status>
+</kw>
+<kw name="Empty Directory" library="OperatingSystem">
+<doc>Deletes all the content from the given directory.</doc>
+<arguments>
+<arg>D:\\UFT_Project_Workspace\\ArchiveLibrary\\ArchiveLibrary/SampleData/compressed_files/folder/folder1</arg>
+</arguments>
+<msg timestamp="20200204 20:20:21.796" level="INFO" html="yes">Listing contents of directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1&lt;/a&gt;'.</msg>
+<msg timestamp="20200204 20:20:24.082" level="INFO" html="yes">Emptied directory '&lt;a href="file://D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1"&gt;D:\UFT_Project_Workspace\ArchiveLibrary\ArchiveLibrary\SampleData\compressed_files\folder\folder1&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200204 20:20:21.795" endtime="20200204 20:20:24.082"></status>
+</kw>
+<status status="PASS" starttime="20200204 20:20:04.875" endtime="20200204 20:20:24.083" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200204 20:20:04.847" endtime="20200204 20:20:24.083"></status>
+</suite>
+<status status="PASS" starttime="20200204 20:20:04.844" endtime="20200204 20:20:24.085"></status>
+</suite>
+<status status="PASS" starttime="20200204 20:20:04.821" endtime="20200204 20:20:24.086"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="ArchiveLibrary">ArchiveLibrary</stat>
+<stat pass="1" fail="0" id="s1-s1" name="ArchiveLibrary">ArchiveLibrary.ArchiveLibrary</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="ArchiveLibrary">ArchiveLibrary.ArchiveLibrary.ArchiveLibrary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
