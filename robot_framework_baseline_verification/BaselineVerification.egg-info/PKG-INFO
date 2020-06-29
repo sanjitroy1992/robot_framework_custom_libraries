@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: BaselineVerification
+Version: 1.0
+Summary: BaselineVerification
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache2
+Description: BaselineVerification
+Platform: UNKNOWN
+Classifier: Development Status :: Version 1.1
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="BaselineVerification" type="library" format="ROBOT" generated="20200629 14:53:45">
+<version></version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``BaselineVerification``.</doc>
+<kw name="Verify Excel Data">
+<arguments>
+<arg>app_file</arg>
+<arg>primary_column_name</arg>
+<arg>baseline_file</arg>
+<arg>baseline_sheet=0</arg>
+<arg>table_name=None</arg>
+<arg>rowid=None</arg>
+<arg>skip_columns_names=None</arg>
+<arg>sort_data_in_file=False</arg>
+</arguments>
+<doc>| Usage |
+        To Verify Excel data from the generated excel report in the application.
+
+          | Arguments |
+
+         'app_file' = Generated excel report file path.
+
+         'primary_column_name' = Data compared with respect to this column name present in baseline excel file.
+                        Values present in this column are compared with generated excel file data and if not present
+                        in generated excel file then values are reported in the log file in the form of a list.
+
+         'baseline_file' = Baseline excel file path.
+
+         'baseline_sheet'[Optional] = Baseline file sheet name. By default the value is set to '0', first sheet of workbook.
+
+         'table_name'[Optional] = To verify specific table from the excel , need to specify table header name
+                                By default the value is set to None if there are no table header name in the file
+
+         'rowid'[Optional] = To verify specific row of baseline excel.By default the value is set to None
+                             to verify the entire rows present in baseline
+
+         'skip_columns_names'[Optional] = Column names to be skipped while comparision.
+                        Needs to be passed in the form of a list, see in example. By default the value is set to None.
+
+         'sort_data_in_file'[Optional] = Data for both files to be sorted for comparision.
+                        Needs to be passed as "True". By default the value is set to "False".
+
+    Example 1 (By default, first sheet of baseline file will be considered for verification if baseline_sheet is not passed):
+        *** Variables ***
+        @{skip_columns}    Create Date    Trade Date
+        | ***TestCases*** |
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | table_name=Theirs | skip_columns_names=${skip_columns} |
+
+    Example 2 (Passing specific sheet from baseline. eg:'Ours'):
+        *** Variables ***
+        @{skip_columns}    Create Date
+        | ***TestCases*** |
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num  | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | baseline_sheet=Ours | table_name=Ours | skip_columns_names=${skip_columns} |
+
+    Example 3 (Verify without table_name in generated excel report.):
+        *** Variables ***
+        @{skip_columns}    Create Date
+        | ***TestCases*** |
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num  | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | baseline_sheet=NoTableNameData | skip_columns_names=${skip_columns} |
+
+    Example 4 (Verify with only one row from baseline excel.):
+        *** Variables ***
+        @{skip_columns}    Create Date
+        | ***TestCases*** |
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num  | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | rowid=2 | skip_columns_names=${skip_columns} |
+
+    Example 5 (Verify with selected multiple rows from baseline excel.):
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num  | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | rowid=2,5,7 | skip_columns_names=${skip_columns} |
+
+    Example 6 (Verify with specified range of rows from baseline excel.):
+        | Verify Excel Data | app_file=${EXECDIR}\DatasetFiles\Summary Report.xls |  primary_column_name=Reference Num  | baseline_file=${EXECDIR}\DatasetFiles\baseline2.xlsx | rowid=2-7 | skip_columns_names=${skip_columns} |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Verify Html All Table Data">
+<arguments>
+<arg>html_file_path=None</arg>
+<arg>html_table_xpath=None</arg>
+<arg>baseline_excel_file_path=None</arg>
+<arg>baseline_sheet_name=Sheet1</arg>
+<arg>primary_column_name=None</arg>
+<arg>skip_columns_names=None</arg>
+<arg>rowid=None</arg>
+<arg>sort_data_in_file=False</arg>
+</arguments>
+<doc>| Usage |
+        To Verify HTML data from all the HTML tables in the application.
+
+          | Arguments |
+
+         ''html_file_path' = HTML file path.
+
+         'html_table_xpath' = XPATH of all the html tables. This xpath should contain all the tables present in the html page.
+
+         'baseline_excel_file_path' = Baseline excel file path.
+
+         'baseline_sheet_name'[Optional] = Baseline file sheet name. By default the value is set to 'Sheet1'.
+
+         'primary_column_name' = Data compared with respect to this column name present in baseline excel file.
+                        Values present in this column are compared with html file data and if not present
+                        in html page then values are reported in the log file in the form of a list.
+
+         'rowid'[Optional] = To verify specific row of baseline excel.By default the value is set to None
+                         to verify the entire rows present in baseline
+
+         'skip_columns_names'[Optional] = Column names to be skipped while comparision.
+                        Needs to be passed in the form of a list, see in example. By default the value is set to None.
+
+         'sort_data_in_file'[Optional] = Data for both files to be sorted for comparision.
+                        Needs to be passed as "True". By default the value is set to "False".
+
+    Example 1 :
+        Verify Html All Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//div[contains(text(),"Deal Number")]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline2.xlsx | primary_column_name=Sender's Reference
+
+    Example 2 (Passing specific sheet from baseline. eg:'Sheet2'):
+        Verify Html All Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//div[contains(text(),"Deal Number")]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline2.xlsx | baseline_sheet_name=Sheet2 | primary_column_name=Sender's Reference
+
+    Example 3 (Verify with only one row from baseline excel.) :
+        Verify Html All Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//div[contains(text(),"Deal Number")]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline2.xlsx | primary_column_name=Sender's Reference  |  rowid=3
+
+    Example 4 (Verify with selected multiple rows from baseline excel.):
+        Verify Html All Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//div[contains(text(),"Deal Number")]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline2.xlsx | primary_column_name=Sender's Reference  |  rowid=2,5,7
+
+    Example 5 (Verify with specified range of rows from baseline excel.) :
+        Verify Html All Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//div[contains(text(),"Deal Number")]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline2.xlsx | primary_column_name=Sender's Reference  |  rowid=3-6</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Verify Html Single Table Data">
+<arguments>
+<arg>html_file_path=None</arg>
+<arg>html_table_xpath=None</arg>
+<arg>baseline_excel_file_path=None</arg>
+<arg>baseline_sheet_name=Sheet1</arg>
+<arg>primary_column_name=None</arg>
+<arg>skip_columns_names=None</arg>
+<arg>rowid=None</arg>
+<arg>sort_data_in_file=False</arg>
+</arguments>
+<doc>| Usage |
+        To Verify HTML data from a single HTML table in application.
+
+          | Arguments |
+
+         ''html_file_path' = HTML file path.
+
+         'html_table_xpath' = XPATH of the html single table. TThis xpath should contain only one table in the entire html page.
+
+         'baseline_excel_file_path' = Baseline excel file path.
+
+         'baseline_sheet_name'[Optional] = Baseline file sheet name. By default the value is set to 'Sheet1'.
+
+         'primary_column_name' = Data compared with respect to this column name present in baseline excel file.
+                        Values present in this column are compared with html file data and if not present
+                        in html page then values are reported in the log file in the form of a list.
+
+         'rowid'[Optional] = To verify specific row of baseline excel.By default the value is set to None
+                                 to verify the entire rows present in baseline
+
+         'skip_columns_names'[Optional] = Column names to be skipped while comparision.
+                        Needs to be passed in the form of a list, see in example. By default the value is set to None.
+
+         'sort_data_in_file'[Optional] = Data for both files to be sorted for comparision.
+                        Needs to be passed as "True". By default the value is set to "False".
+
+    Example 1 :
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | primary_column_name=Reference Num
+
+    Example 2 (Passing specific sheet from baseline. eg:'Sheet2'):
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | baseline_sheet_name=Sheet2 | primary_column_name=Reference Num
+
+    Example 3 (Without baseline column headers):
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | primary_column_name=10
+
+    Example 4 (Verify with only one row from baseline excel.):
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | primary_column_name=10  |  rowid=3
+
+    Example 5 (Verify with selected multiple rows from baseline excel.):
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | primary_column_name=10  |  rowid=2,5,7
+
+    Example 6 (Verify with specified range of rows from baseline excel.):
+        Verify Html Single Table Data | html_file_path=${EXECDIR}\DatasetFiles\report.HTML | html_table_xpath=//table//div[text()="Ours"]/../../.. | baseline_excel_file_path=${EXECDIR}\DatasetFiles\baseline1.xlsx | primary_column_name=10  |  rowid=3-6
+
+    Note: For table without the headers. Start naming the column headers name from value 1 in baseline file.</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Verify View Page Data">
+<arguments>
+<arg>table_id</arg>
+<arg>input_datafile</arg>
+<arg>rowid</arg>
+</arguments>
+<doc>| Usage |
+    It compares the application View page table.
+
+      | Arguments |
+
+     'locator' = locator of the table. It's needed to provide id of table.
+
+     'input_datafile' = Baseline excel file location
+
+     'rowid' = rowid of the baseline file
+
+Example :
+    Open Browser | URL  | Chrome
+    Verify View Page Data | //table[@id="tbl_UIMsg"] | E:\_UTF_demo\VERIFYVIEWPAGE_Data.xls | rowid=1</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>
